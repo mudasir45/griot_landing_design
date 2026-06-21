@@ -144,7 +144,7 @@ export default function CoursesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className=" text-center mb-14"
+          className=" text-center mb-10 sm:mb-14"
         >
           <div className="text-center">
             <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-50 border-primary-200 text-primary mb-4">
@@ -153,11 +153,11 @@ export default function CoursesSection() {
                 Course Catalog
               </span>
             </div>
-            <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-navy mb-4">
+            <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
               Explore What{" "}
               <span className="text-primary">You Love</span>
             </h2>
-            <p className="text-body text-center text-lg max-w-xl leading-relaxed w-full mx-auto">
+            <p className="text-body text-center text-base sm:text-lg max-w-xl leading-relaxed w-full mx-auto px-1">
               200+ expert-led courses across subjects your child is passionate
               about. Live, interactive, and outcome-focused.
             </p>
@@ -196,14 +196,14 @@ export default function CoursesSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex flex-wrap gap-2 justify-center mb-10"
+          className="flex gap-2 mb-8 sm:mb-10 overflow-x-auto pb-1 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:justify-center scrollbar-hide"
         >
           {categoryPills.map((pill) => {
             const Icon = pill.icon;
             return (
               <button
                 key={pill.label}
-                className={`pill inline-flex items-center gap-1.5 px-4 py-2 text-sm font-bold transition-all duration-200 cursor-pointer ${pill.active
+                className={`pill inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer flex-shrink-0 ${pill.active
                   ? "bg-primary text-white border-primary-dark"
                   : "bg-white text-body border-border hover:bg-primary-50 hover:text-primary hover:border-primary-200"
                   }`}
@@ -221,7 +221,7 @@ export default function CoursesSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5"
         >
           {courses.map((course) => {
             const Icon = course.icon;
@@ -257,7 +257,7 @@ export default function CoursesSection() {
                 </div>
 
                 {/* Content */}
-                <div className="p-5 flex flex-col gap-3 flex-1">
+                <div className="p-4 sm:p-5 flex flex-col gap-3 flex-1">
                   <div className="flex items-start gap-2 flex-wrap">
                     <span
                       className={`pill text-[11px] font-bold px-2.5 py-0.5 ${course.tagColor}`}
@@ -268,7 +268,7 @@ export default function CoursesSection() {
                       {course.grades}
                     </span>
                   </div>
-                  <h3 className="font-display font-bold text-xl text-navy group-hover:text-primary transition-colors">
+                  <h3 className="font-display font-bold text-lg sm:text-xl text-navy group-hover:text-primary transition-colors">
                     {course.title}
                   </h3>
                   <p className="text-sm text-body leading-relaxed flex-1">{course.desc}</p>
@@ -295,7 +295,7 @@ export default function CoursesSection() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-center mt-10"
         >
-          <button className="btn inline-flex items-center gap-2 px-8 py-4 font-bold text-navy bg-white border-gray-200">
+          <button className="btn inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 font-bold text-navy bg-white border-gray-200 w-full sm:w-auto">
             View All 200+ Courses
             <ChevronRight className="w-4 h-4" />
           </button>

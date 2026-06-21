@@ -104,7 +104,7 @@ export default function FeaturesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-2xl mx-auto mb-14"
+          className="text-center max-w-2xl mx-auto mb-10 sm:mb-14"
         >
           <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-orange-50 border-orange-200 text-orange mb-4">
             <Monitor className="w-4 h-4" />
@@ -112,11 +112,11 @@ export default function FeaturesSection() {
               What We Offer
             </span>
           </div>
-          <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-navy mb-4">
+          <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
             One Platform,{" "}
             <span className="text-primary">Every Format</span>
           </h2>
-          <p className="text-body text-lg leading-relaxed">
+          <p className="text-body text-base sm:text-lg leading-relaxed px-1">
             Whether online, in-person, or through your school — Griot Academy
             delivers unified learning solutions tailored for every student and
             institution.
@@ -124,7 +124,7 @@ export default function FeaturesSection() {
         </motion.div>
 
         {/* Featured split layouts with large imagery */}
-        <div className="space-y-8 mb-8">
+        <div className="space-y-6 sm:space-y-8 mb-6 sm:mb-8">
           {featured.map((feature, i) => {
             const Icon = feature.icon;
             const imageFirst = i % 2 === 0;
@@ -135,7 +135,7 @@ export default function FeaturesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.6 }}
-                className={`grid lg:grid-cols-2 gap-8 items-center ${imageFirst ? "" : ""}`}
+                className={`grid lg:grid-cols-2 gap-5 sm:gap-8 items-center`}
               >
                 <div
                   className={`relative ${imageFirst ? "order-1" : "order-1 lg:order-2"}`}
@@ -150,13 +150,13 @@ export default function FeaturesSection() {
                   </div>
                 </div>
 
-                <div className={`flex flex-col gap-4 ${imageFirst ? "order-2" : "order-2 lg:order-1"}`}>
+                <div className={`flex flex-col gap-3 sm:gap-4 ${imageFirst ? "order-2" : "order-2 lg:order-1"}`}>
                   <div
-                    className={`w-12 h-12 rounded-2xl ${feature.iconBg} flex items-center justify-center`}
+                    className={`w-11 h-11 sm:w-12 sm:h-12 rounded-2xl ${feature.iconBg} flex items-center justify-center`}
                   >
-                    <Icon className={`w-6 h-6 ${feature.color}`} />
+                    <Icon className={`w-5 h-5 sm:w-6 sm:h-6 ${feature.color}`} />
                   </div>
-                  <h3 className="font-display font-extrabold text-3xl text-navy">
+                  <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-navy">
                     {feature.title}
                   </h3>
                   <p className="text-body leading-relaxed">{feature.desc}</p>
@@ -178,7 +178,7 @@ export default function FeaturesSection() {
         </div>
 
         {/* Remaining features — image cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {rest.map((feature, i) => {
             const Icon = feature.icon;
             return (

@@ -51,53 +51,58 @@ export default function InstructorsSection() {
   return (
     <section className="section-padding bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero image strip */}
+        {/* Full-width header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid lg:grid-cols-5 gap-8 items-center mb-14"
+          className="text-center max-w-2xl mx-auto mb-8 sm:mb-12"
         >
-          <div className="lg:col-span-3 relative">
-            <div className="relative card overflow-hidden aspect-[16/9] lg:aspect-[21/9]">
-              <SectionImage
-                src="/images/facility-bg.jpg"
-                alt="World-class educators guiding small groups of engaged students"
-                fill
-                sizes="(max-width: 1024px) 100vw, 60vw"
-              />
-            </div>
-            <div className="absolute -bottom-4 -right-2 sm:right-4 card overflow-hidden w-28 sm:w-36 aspect-square border-primary-200 animate-float-gentle">
-              <SectionImage
-                src="/images/about01.jpg"
-                alt="One-on-one mentorship between instructor and student"
-                fill
-                sizes="144px"
-              />
-            </div>
+          <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-100 border-primary-200 text-primary mb-4">
+            <Users className="w-4 h-4" />
+            <span className="text-xs font-bold uppercase tracking-wider">
+              The Human Core
+            </span>
           </div>
+          <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
+            World-Class{" "}
+            <span className="text-primary">Educators</span>
+          </h2>
+          <p className="text-body text-base sm:text-lg leading-relaxed px-1">
+            Industry leaders and credentialed educators who make learning feel
+            like an adventure — not a chore.
+          </p>
+        </motion.div>
 
-          <div className="lg:col-span-2 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-100 border-primary-200 text-primary mb-4">
-              <Users className="w-4 h-4" />
-              <span className="text-xs font-bold uppercase tracking-wider">
-                The Human Core
-              </span>
-            </div>
-            <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-navy mb-4">
-              World-Class{" "}
-              <span className="text-primary">Educators</span>
-            </h2>
-            <p className="text-body text-lg leading-relaxed">
-              Industry leaders and credentialed educators who make learning feel
-              like an adventure — not a chore.
-            </p>
+        {/* Hero image */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative mb-8 sm:mb-14"
+        >
+          <div className="relative card overflow-hidden aspect-[16/10] sm:aspect-[21/9]">
+            <SectionImage
+              src="/images/facility-bg.jpg"
+              alt="World-class educators guiding small groups of engaged students"
+              fill
+              sizes="(max-width: 1024px) 100vw, 80vw"
+            />
+          </div>
+          <div className="absolute -bottom-3 right-2 sm:-bottom-4 sm:right-4 hidden sm:block card overflow-hidden w-24 sm:w-36 aspect-square border-primary-200 animate-float-gentle">
+            <SectionImage
+              src="/images/about01.jpg"
+              alt="One-on-one mentorship between instructor and student"
+              fill
+              sizes="144px"
+            />
           </div>
         </motion.div>
 
         {/* Instructors Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {instructors.map((instructor, i) => (
             <motion.div
               key={instructor.name}
@@ -106,18 +111,18 @@ export default function InstructorsSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ scale: 1 }}
-              className="card bg-white border-gray-200 p-6 flex flex-col items-center text-center gap-3 cursor-pointer group"
+              className="card bg-white border-gray-200 p-5 sm:p-6 flex flex-col items-center text-center gap-3 cursor-pointer group"
             >
               <div
-                className={`w-16 h-16 rounded-3xl ${instructor.bg} flex items-center justify-center`}
+                className={`w-14 h-14 sm:w-16 sm:h-16 rounded-3xl ${instructor.bg} flex items-center justify-center`}
               >
-                <span className="font-display font-extrabold text-xl text-white">
+                <span className="font-display font-extrabold text-lg sm:text-xl text-white">
                   {instructor.initials}
                 </span>
               </div>
 
               <div>
-                <h3 className="font-display font-bold text-base text-navy group-hover:text-primary transition-colors">
+                <h3 className="font-display font-bold text-sm sm:text-base text-navy group-hover:text-primary transition-colors">
                   {instructor.name}
                 </h3>
                 <p className="text-xs text-subtle mt-0.5">{instructor.title}</p>
@@ -125,15 +130,15 @@ export default function InstructorsSection() {
 
               <div className="w-full grid grid-cols-3 gap-1 py-3 border-y border-gray-100">
                 <div className="text-center">
-                  <p className="font-display font-bold text-sm text-navy">{instructor.rating}</p>
+                  <p className="font-display font-bold text-xs sm:text-sm text-navy">{instructor.rating}</p>
                   <p className="text-[10px] text-subtle">Rating</p>
                 </div>
                 <div className="text-center border-x border-gray-100">
-                  <p className="font-display font-bold text-sm text-navy">{instructor.courses}</p>
+                  <p className="font-display font-bold text-xs sm:text-sm text-navy">{instructor.courses}</p>
                   <p className="text-[10px] text-subtle">Courses</p>
                 </div>
                 <div className="text-center">
-                  <p className="font-display font-bold text-sm text-navy">{instructor.students.toLocaleString()}</p>
+                  <p className="font-display font-bold text-xs sm:text-sm text-navy">{instructor.students.toLocaleString()}</p>
                   <p className="text-[10px] text-subtle">Students</p>
                 </div>
               </div>
@@ -167,7 +172,7 @@ export default function InstructorsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="grid grid-cols-3 gap-4 mt-12"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-8 sm:mt-12"
         >
           {[
             { value: "10,000+", label: "Students Served", icon: Users, color: "text-primary", bg: "bg-primary-100" },
@@ -178,13 +183,15 @@ export default function InstructorsSection() {
             return (
               <div
                 key={stat.label}
-                className="card bg-white border-gray-200 p-5 flex flex-col items-center gap-2 text-center"
+                className="card bg-white border-gray-200 p-4 sm:p-5 flex flex-row sm:flex-col items-center gap-3 sm:gap-2 text-left sm:text-center"
               >
-                <div className={`w-10 h-10 rounded-xl ${stat.bg} flex items-center justify-center`}>
+                <div className={`w-10 h-10 rounded-xl ${stat.bg} flex items-center justify-center flex-shrink-0`}>
                   <Icon className={`w-5 h-5 ${stat.color}`} />
                 </div>
-                <p className="font-display font-extrabold text-2xl text-navy">{stat.value}</p>
-                <p className="text-xs font-semibold text-subtle">{stat.label}</p>
+                <div className="sm:text-center">
+                  <p className="font-display font-extrabold text-xl sm:text-2xl text-navy">{stat.value}</p>
+                  <p className="text-xs font-semibold text-subtle">{stat.label}</p>
+                </div>
               </div>
             );
           })}

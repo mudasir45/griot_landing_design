@@ -50,7 +50,7 @@ function FAQItem({
       }`}
     >
       <button
-        className="w-full flex items-center justify-between gap-4 p-5 text-left"
+        className="w-full flex items-start justify-between gap-3 sm:gap-4 p-4 sm:p-5 text-left"
         onClick={onToggle}
         aria-expanded={isOpen}
       >
@@ -64,7 +64,7 @@ function FAQItem({
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
-          className="flex-shrink-0"
+          className="flex-shrink-0 mt-0.5"
         >
           <ChevronDown
             className={`w-5 h-5 transition-colors ${
@@ -83,7 +83,7 @@ function FAQItem({
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
           >
-            <div className="px-5 pb-5 pt-0 border-t border-gray-100">
+            <div className="px-4 sm:px-5 pb-4 sm:pb-5 pt-0 border-t border-gray-100">
               <p className="text-sm text-body leading-relaxed pt-3">{a}</p>
             </div>
           </motion.div>
@@ -99,16 +99,39 @@ export default function FAQSection() {
   return (
     <section className="section-padding bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-5 gap-10 lg:gap-12 items-start">
+        {/* Full-width header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-2xl mx-auto mb-8 sm:mb-12"
+        >
+          <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-50 border-primary-200 text-primary mb-4">
+            <HelpCircle className="w-4 h-4" />
+            <span className="text-xs font-bold uppercase tracking-wider">
+              Frequently Asked
+            </span>
+          </div>
+          <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
+            Got{" "}
+            <span className="text-primary">Questions?</span>
+          </h2>
+          <p className="text-body text-base sm:text-lg leading-relaxed px-1">
+            Everything parents and schools need to know before getting started.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-10 lg:gap-12 items-start">
           {/* Visual column */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2 lg:sticky lg:top-24 hidden sm:block"
+            className="lg:col-span-2"
           >
-            <div className="relative card overflow-hidden aspect-[4/5] border-primary-200 mb-4">
+            <div className="relative card overflow-hidden aspect-[16/10] sm:aspect-[4/5] lg:aspect-[4/5] border-primary-200 mb-4">
               <SectionImage
                 src="/images/The_Friend.85cbfd7e36821d7569bc2fbfb9894a2c.webp"
                 alt="Students connecting in a safe, moderated online classroom"
@@ -116,8 +139,8 @@ export default function FAQSection() {
                 sizes="(max-width: 1024px) 100vw, 35vw"
               />
             </div>
-            <div className="card bg-primary border-primary-dark p-5">
-              <p className="font-display font-bold text-lg text-white mb-1">
+            <div className="card bg-primary border-primary-dark p-4 sm:p-5">
+              <p className="font-display font-bold text-base sm:text-lg text-white mb-1">
                 Still have questions?
               </p>
               <p className="text-on-dark-muted text-sm mb-4">
@@ -130,30 +153,8 @@ export default function FAQSection() {
             </div>
           </motion.div>
 
-          {/* FAQ content */}
+          {/* FAQ accordion */}
           <div className="lg:col-span-3">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center lg:text-left mb-10"
-            >
-              <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-50 border-primary-200 text-primary mb-4">
-                <HelpCircle className="w-4 h-4" />
-                <span className="text-xs font-bold uppercase tracking-wider">
-                  Frequently Asked
-                </span>
-              </div>
-              <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-navy mb-4">
-                Got{" "}
-                <span className="text-primary">Questions?</span>
-              </h2>
-              <p className="text-body text-lg leading-relaxed">
-                Everything parents and schools need to know before getting started.
-              </p>
-            </motion.div>
-
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -170,19 +171,6 @@ export default function FAQSection() {
                   onToggle={() => setOpenIndex(openIndex === i ? null : i)}
                 />
               ))}
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-center mt-10 sm:hidden"
-            >
-              <button className="btn inline-flex items-center gap-2 px-6 py-3 font-bold text-navy bg-white border-gray-200">
-                <HelpCircle className="w-4 h-4" />
-                Contact Support
-              </button>
             </motion.div>
           </div>
         </div>

@@ -50,6 +50,7 @@
 /* ─── Base Styles ────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -58,6 +59,7 @@ body {
   font-family: var(--font-nunito), "Nunito", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
 }
 
 /* ─── Flat UI Utilities (no neumorphism / extruded shadows) ─── */
@@ -100,8 +102,50 @@ body {
   }
 
   .section-padding {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  @media (min-width: 640px) {
+    .section-padding {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+
+  .section-heading {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .section-heading {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-heading {
+      font-size: 3rem;
+      line-height: 1.1;
+    }
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 
   .font-display {

@@ -76,28 +76,28 @@ export default function SafetySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative rounded-[28px] overflow-hidden mb-14 aspect-[21/9] sm:aspect-[21/8] min-h-[200px]"
+          className="relative rounded-2xl sm:rounded-[28px] overflow-hidden mb-10 sm:mb-14 aspect-[4/3] sm:aspect-[21/9] min-h-[220px] sm:min-h-[200px]"
         >
           <SectionImage
             src="/images/facility-bg.jpg"
             alt="Certified instructor guiding children in a safe, supervised learning environment"
             fill
             sizes="100vw"
-            className="rounded-[28px]"
+            className="rounded-2xl sm:rounded-[28px]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/60 to-navy/30" />
-          <div className="absolute inset-0 flex flex-col justify-center px-6 sm:px-10 lg:px-14 max-w-2xl">
-            <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-white/15 border-white/25 text-white mb-4 self-start">
+          <div className="absolute inset-0 flex flex-col justify-end sm:justify-center px-4 py-5 sm:px-10 lg:px-14 max-w-2xl">
+            <div className="inline-flex items-center gap-2 pill px-3 sm:px-4 py-1.5 sm:py-2 bg-white/15 border-white/25 text-white mb-3 sm:mb-4 self-start">
               <ShieldCheck className="w-4 h-4" />
               <span className="text-xs font-bold uppercase tracking-wider">
                 Designed for Joy. Built for Safety.
               </span>
             </div>
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-3">
+            <h2 className="font-display font-extrabold text-2xl sm:text-4xl lg:text-5xl text-white mb-2 sm:mb-3">
               Safety Is Not{" "}
               <span className="text-green-light">Optional</span>
             </h2>
-            <p className="text-on-dark-muted text-base sm:text-lg leading-relaxed">
+            <p className="text-on-dark-muted text-sm sm:text-lg leading-relaxed">
               Every feature is built with your child&apos;s privacy, security, and
               wellbeing at the center.
             </p>
@@ -105,7 +105,7 @@ export default function SafetySection() {
         </motion.div>
 
         {/* Safety Features Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mb-10 sm:mb-16">
           {safetyFeatures.map((item, i) => {
             const Icon = item.icon;
             return (
@@ -132,7 +132,7 @@ export default function SafetySection() {
         </div>
 
         {/* Parent Dashboard Section */}
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -146,7 +146,7 @@ export default function SafetySection() {
                 Parent Dashboard
               </span>
             </div>
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-navy">
+            <h2 className="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-navy">
               Everything in{" "}
               <span className="text-primary">One Dashboard</span>
             </h2>
@@ -167,7 +167,7 @@ export default function SafetySection() {
                 </li>
               ))}
             </ul>
-            <button className="btn self-start inline-flex items-center gap-2 px-6 py-3 font-bold bg-primary text-white border-primary-dark">
+            <button className="btn self-stretch sm:self-start inline-flex items-center justify-center gap-2 px-6 py-3 font-bold bg-primary text-white border-primary-dark w-full sm:w-auto">
               <TrendingUp className="w-4 h-4" />
               See the Dashboard
             </button>
@@ -190,7 +190,7 @@ export default function SafetySection() {
               />
             </div>
 
-            <div className="card bg-white border-primary-200 p-5 relative -mt-16 mx-4 sm:mx-8">
+            <div className="card bg-white border-primary-200 p-4 sm:p-5 relative -mt-10 sm:-mt-16 mx-2 sm:mx-8">
               <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-100">
                 <div className="flex gap-1.5">
                   <div className="w-2.5 h-2.5 rounded-full bg-red-400" />

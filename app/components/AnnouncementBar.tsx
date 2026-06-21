@@ -9,13 +9,13 @@ export default function AnnouncementBar() {
   if (!visible) return null;
 
   return (
-    <div className="relative bg-primary text-white text-center px-4 py-2.5 flex items-center justify-center gap-2">
-      <Sparkles className="w-3.5 h-3.5 flex-shrink-0" aria-hidden="true" />
-      <p className="text-xs sm:text-sm font-semibold">
+    <div className="relative bg-primary text-white text-center px-4 sm:px-6 py-2.5 flex items-center justify-center gap-2 pr-10 sm:pr-12">
+      <Sparkles className="w-3.5 h-3.5 flex-shrink-0 hidden sm:block" aria-hidden="true" />
+      <p className="text-[11px] sm:text-xs md:text-sm font-semibold leading-snug">
         Summer STEM Camps now enrolling — spots filling fast!{" "}
         <a
           href="#courses"
-          className="underline underline-offset-2 hover:text-yellow transition-colors font-bold"
+          className="underline underline-offset-2 hover:text-yellow transition-colors font-bold whitespace-nowrap"
         >
           Explore classes →
         </a>

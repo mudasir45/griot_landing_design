@@ -23,6 +23,12 @@ export const metadata: Metadata = {
   keywords: "kids online classes, children education, coding for kids, chess lessons, robotics for children, STEM education",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {

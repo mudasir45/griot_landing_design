@@ -65,7 +65,7 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-2xl mx-auto mb-12"
+          className="text-center max-w-2xl mx-auto mb-8 sm:mb-12"
         >
           <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-yellow/20 border-yellow/50 text-yellow-dark mb-4">
             <MessageSquare className="w-4 h-4" />
@@ -73,16 +73,16 @@ export default function TestimonialsSection() {
               Voices of Success
             </span>
           </div>
-          <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-navy mb-4">
+          <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
             Loved by Kids,{" "}
             <span className="text-primary">Trusted by Parents</span>
           </h2>
-          <p className="text-body text-lg leading-relaxed">
+          <p className="text-body text-base sm:text-lg leading-relaxed px-1">
             Real results from families and schools across America.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 lg:items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 lg:items-center">
           {/* Visual column */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -121,7 +121,7 @@ export default function TestimonialsSection() {
           </motion.div>
 
           {/* Testimonials grid */}
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {testimonials.map((t, i) => (
               <motion.div
                 key={t.name}

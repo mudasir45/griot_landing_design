@@ -28,9 +28,9 @@ export default function Footer() {
     <footer className="bg-navy text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer */}
-        <div className="py-14 grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 border-b border-white/10">
+        <div className="py-10 sm:py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 border-b border-white/10">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-1 flex flex-col gap-4">
+          <div className="sm:col-span-2 md:col-span-1 flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2.5 group" aria-label="Griot Academy">
               <div className="w-9 h-9 bg-primary rounded-2xl flex items-center justify-center">
                 <GraduationCap className="w-5 h-5 text-white" />

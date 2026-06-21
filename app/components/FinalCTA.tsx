@@ -16,8 +16,27 @@ export default function FinalCTA() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-3 gap-8 items-center">
-          {/* Left persona */}
+        {/* Mobile persona strip — above CTA */}
+        <div className="grid grid-cols-2 gap-3 mb-8 lg:hidden max-w-sm mx-auto">
+          <div className="relative card overflow-hidden aspect-square border-sky-200">
+            <SectionImage
+              src="/images/The_Coder.4da186f687ce6f7459ecfac9704755dc.webp"
+              alt="Young coder ready to start"
+              fill
+              sizes="45vw"
+            />
+          </div>
+          <div className="relative card overflow-hidden aspect-square border-green-200">
+            <SectionImage
+              src="/images/The_Scholar.d92aa1ba7abc5bbd377244bd1ee7151c.webp"
+              alt="Engaged student learning"
+              fill
+              sizes="45vw"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -35,55 +54,54 @@ export default function FinalCTA() {
             </div>
           </motion.div>
 
-          {/* Center CTA */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col items-center gap-6 text-center"
+            className="flex flex-col items-center gap-5 sm:gap-6 text-center"
           >
-            <div className="card-sm w-16 h-16 bg-primary border-primary-dark flex items-center justify-center">
-              <GraduationCap className="w-8 h-8 text-white" />
+            <div className="card-sm w-14 h-14 sm:w-16 sm:h-16 bg-primary border-primary-dark flex items-center justify-center">
+              <GraduationCap className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
             </div>
 
             <div>
-              <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-yellow/20 border-yellow/50 text-yellow-dark mb-5">
+              <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-yellow/20 border-yellow/50 text-yellow-dark mb-4 sm:mb-5">
                 <Sparkles className="w-4 h-4" />
                 <span className="text-xs font-bold uppercase tracking-wider">
                   Ready to Step into the Future?
                 </span>
               </div>
-              <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-navy leading-tight">
+              <h2 className="font-display font-extrabold section-heading text-navy leading-tight">
                 Start Your{" "}
                 <span className="text-primary">Learning Journey</span>
-                <br />
+                <br className="hidden sm:block" />
+                <span className="sm:hidden"> </span>
                 Today — It&apos;s Free
               </h2>
             </div>
 
-            <p className="text-body text-lg sm:text-xl max-w-xl leading-relaxed">
+            <p className="text-body text-base sm:text-lg lg:text-xl max-w-xl leading-relaxed px-1">
               Join 10,000+ families who&apos;ve already discovered the joy of
               learning with Griot Academy. No credit card needed to try your
               first class.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button className="btn inline-flex items-center justify-center gap-2 px-10 py-5 text-base font-bold bg-primary text-white border-primary-dark">
+            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto max-w-md sm:max-w-none">
+              <button className="btn inline-flex items-center justify-center gap-2 px-8 sm:px-10 py-4 sm:py-5 text-sm sm:text-base font-bold bg-primary text-white border-primary-dark w-full sm:w-auto">
                 Get Started Free
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="btn inline-flex items-center justify-center gap-2 px-8 py-5 text-base font-bold bg-yellow text-navy border-yellow-dark">
+              <button className="btn inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 sm:py-5 text-sm sm:text-base font-bold bg-yellow text-navy border-yellow-dark w-full sm:w-auto">
                 Browse All Courses
               </button>
             </div>
 
-            <p className="text-sm text-subtle">
+            <p className="text-xs sm:text-sm text-subtle">
               Free trial · No credit card required · Cancel anytime
             </p>
           </motion.div>
 
-          {/* Right persona */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -100,26 +118,6 @@ export default function FinalCTA() {
               />
             </div>
           </motion.div>
-        </div>
-
-        {/* Mobile persona strip */}
-        <div className="grid grid-cols-2 gap-4 mt-10 lg:hidden max-w-sm mx-auto">
-          <div className="relative card overflow-hidden aspect-square border-sky-200">
-            <SectionImage
-              src="/images/The_Coder.4da186f687ce6f7459ecfac9704755dc.webp"
-              alt="Young coder ready to start"
-              fill
-              sizes="180px"
-            />
-          </div>
-          <div className="relative card overflow-hidden aspect-square border-green-200">
-            <SectionImage
-              src="/images/The_Scholar.d92aa1ba7abc5bbd377244bd1ee7151c.webp"
-              alt="Engaged student learning"
-              fill
-              sizes="180px"
-            />
-          </div>
         </div>
       </div>
     </section>
