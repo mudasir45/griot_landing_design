@@ -1,26 +1,149 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ─── Design System: Griot Academy ─────────────────────────── */
+/* Balanced palette with WCAG-friendly text hierarchy            */
+/* ──────────────────────────────────────────────────────────── */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Brand — rich violet, not washed out */
+  --color-primary:       #6D28D9;
+  --color-primary-light: #8B5CF6;
+  --color-primary-dark:  #4C1D95;
+  --color-primary-50:    #F5F3FF;
+  --color-primary-100:   #EDE9FE;
+  --color-primary-200:   #DDD6FE;
+
+  --color-yellow:        #F59E0B;
+  --color-yellow-dark:   #D97706;
+  --color-orange:        #EA580C;
+  --color-green:         #059669;
+  --color-green-light:   #D1FAE5;
+  --color-green-dark:    #047857;
+  --color-pink:          #DB2777;
+  --color-sky:           #0284C7;
+  --color-coral:         #E11D48;
+
+  /* Text hierarchy (light backgrounds) */
+  --color-navy:          #1E1B4B;
+  --color-foreground:    #0F172A;
+  --color-body:          #334155;
+  --color-muted:         #475569;
+  --color-subtle:        #64748B;
+
+  /* Text on dark / colored backgrounds */
+  --color-on-dark:       #F8FAFC;
+  --color-on-dark-muted: #CBD5E1;
+
+  /* Surfaces */
+  --color-surface:       #FAFAF9;
+  --color-surface-2:     #FFF7ED;
+  --color-background:    #FFFFFF;
+  --color-border:        #E2E8F0;
+  --color-border-strong: #CBD5E1;
+
+  /* Fonts */
+  --font-display: var(--font-baloo);
+  --font-body:    var(--font-nunito);
+  --font-sans:    var(--font-nunito);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Base Styles ────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--color-foreground);
+  font-family: var(--font-nunito), "Nunito", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Flat UI Utilities (no neumorphism / extruded shadows) ─── */
+@layer utilities {
+  .card {
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    box-shadow: none;
+  }
+
+  .card-sm {
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    box-shadow: none;
+  }
+
+  .btn {
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition:
+      background-color 150ms ease,
+      color 150ms ease,
+      border-color 150ms ease,
+      opacity 150ms ease;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    opacity: 0.92;
+  }
+
+  .btn:active {
+    opacity: 0.88;
+  }
+
+  .pill {
+    border-radius: 999px;
+    border: 1px solid var(--color-border);
+    box-shadow: none;
+  }
+
+  .section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .font-display {
+    font-family: var(--font-baloo), "Baloo 2", cursive;
+  }
+
+  /* Readable body copy — use instead of text-muted for paragraphs */
+  .text-body {
+    color: var(--color-body);
+  }
+
+  /* Secondary text on dark sections — never use primary-100 for body text */
+  .text-on-dark-muted {
+    color: var(--color-on-dark-muted);
+  }
+}
+
+/* ─── Decorative Blob Animation ──────────────────────────────── */
+@keyframes blob-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%  { transform: translateY(-14px) rotate(3deg); }
+  66%  { transform: translateY(8px) rotate(-2deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px) rotate(-2deg); }
+  50% { transform: translateY(-6px) rotate(2deg); }
+}
+
+.animate-blob { animation: blob-float 8s ease-in-out infinite; }
+.animate-float { animation: float-slow 5s ease-in-out infinite; }
+.animate-float-gentle { animation: float-gentle 6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-blob,
+  .animate-float,
+  .animate-float-gentle {
+    animation: none;
+  }
 }
