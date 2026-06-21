@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Users, Star, BookOpen } from "lucide-react";
+import SectionImage from "./ui/SectionImage";
 
 const instructors = [
   {
@@ -50,28 +51,49 @@ export default function InstructorsSection() {
   return (
     <section className="section-padding bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+        {/* Hero image strip */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-2xl mx-auto mb-12"
+          className="grid lg:grid-cols-5 gap-8 items-center mb-14"
         >
-          <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-100 border-primary-200 text-primary mb-4">
-            <Users className="w-4 h-4" />
-            <span className="text-xs font-bold uppercase tracking-wider">
-              The Human Core
-            </span>
+          <div className="lg:col-span-3 relative">
+            <div className="relative card overflow-hidden aspect-[16/9] lg:aspect-[21/9]">
+              <SectionImage
+                src="/images/facility-bg.jpg"
+                alt="World-class educators guiding small groups of engaged students"
+                fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
+              />
+            </div>
+            <div className="absolute -bottom-4 -right-2 sm:right-4 card overflow-hidden w-28 sm:w-36 aspect-square border-primary-200 animate-float-gentle">
+              <SectionImage
+                src="/images/about01.jpg"
+                alt="One-on-one mentorship between instructor and student"
+                fill
+                sizes="144px"
+              />
+            </div>
           </div>
-          <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-navy mb-4">
-            World-Class{" "}
-            <span className="text-primary">Educators</span>
-          </h2>
-          <p className="text-body text-lg leading-relaxed">
-            Industry leaders and credentialed educators who make learning feel
-            like an adventure — not a chore.
-          </p>
+
+          <div className="lg:col-span-2 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-100 border-primary-200 text-primary mb-4">
+              <Users className="w-4 h-4" />
+              <span className="text-xs font-bold uppercase tracking-wider">
+                The Human Core
+              </span>
+            </div>
+            <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-navy mb-4">
+              World-Class{" "}
+              <span className="text-primary">Educators</span>
+            </h2>
+            <p className="text-body text-lg leading-relaxed">
+              Industry leaders and credentialed educators who make learning feel
+              like an adventure — not a chore.
+            </p>
+          </div>
         </motion.div>
 
         {/* Instructors Grid */}
@@ -86,7 +108,6 @@ export default function InstructorsSection() {
               whileHover={{ scale: 1 }}
               className="card bg-white border-gray-200 p-6 flex flex-col items-center text-center gap-3 cursor-pointer group"
             >
-              {/* Avatar */}
               <div
                 className={`w-16 h-16 rounded-3xl ${instructor.bg} flex items-center justify-center`}
               >
@@ -95,7 +116,6 @@ export default function InstructorsSection() {
                 </span>
               </div>
 
-              {/* Info */}
               <div>
                 <h3 className="font-display font-bold text-base text-navy group-hover:text-primary transition-colors">
                   {instructor.name}
@@ -103,7 +123,6 @@ export default function InstructorsSection() {
                 <p className="text-xs text-subtle mt-0.5">{instructor.title}</p>
               </div>
 
-              {/* Stats */}
               <div className="w-full grid grid-cols-3 gap-1 py-3 border-y border-gray-100">
                 <div className="text-center">
                   <p className="font-display font-bold text-sm text-navy">{instructor.rating}</p>
@@ -119,7 +138,6 @@ export default function InstructorsSection() {
                 </div>
               </div>
 
-              {/* Tags */}
               <div className="flex flex-wrap gap-1 justify-center">
                 {instructor.tags.map((tag) => (
                   <span
@@ -131,7 +149,6 @@ export default function InstructorsSection() {
                 ))}
               </div>
 
-              {/* Star */}
               <div className="flex items-center gap-0.5">
                 {[...Array(5)].map((_, j) => (
                   <Star

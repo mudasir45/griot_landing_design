@@ -11,6 +11,7 @@ import {
   LayoutDashboard,
   TrendingUp,
 } from "lucide-react";
+import SectionImage from "./ui/SectionImage";
 
 const safetyFeatures = [
   {
@@ -69,28 +70,38 @@ export default function SafetySection() {
   return (
     <section className="section-padding bg-gradient-to-b from-white to-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Safety Header */}
+        {/* Full-width visual banner */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-2xl mx-auto mb-12"
+          className="relative rounded-[28px] overflow-hidden mb-14 aspect-[21/9] sm:aspect-[21/8] min-h-[200px]"
         >
-          <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-green-light border-green/40 text-green-700 mb-4">
-            <ShieldCheck className="w-4 h-4" />
-            <span className="text-xs font-bold uppercase tracking-wider">
-              Designed for Joy. Built for Safety.
-            </span>
+          <SectionImage
+            src="/images/facility-bg.jpg"
+            alt="Certified instructor guiding children in a safe, supervised learning environment"
+            fill
+            sizes="100vw"
+            className="rounded-[28px]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/60 to-navy/30" />
+          <div className="absolute inset-0 flex flex-col justify-center px-6 sm:px-10 lg:px-14 max-w-2xl">
+            <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-white/15 border-white/25 text-white mb-4 self-start">
+              <ShieldCheck className="w-4 h-4" />
+              <span className="text-xs font-bold uppercase tracking-wider">
+                Designed for Joy. Built for Safety.
+              </span>
+            </div>
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-3">
+              Safety Is Not{" "}
+              <span className="text-green-light">Optional</span>
+            </h2>
+            <p className="text-on-dark-muted text-base sm:text-lg leading-relaxed">
+              Every feature is built with your child&apos;s privacy, security, and
+              wellbeing at the center.
+            </p>
           </div>
-          <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-navy mb-4">
-            Safety Is Not{" "}
-            <span className="text-green">Optional</span>
-          </h2>
-          <p className="text-body text-lg leading-relaxed">
-            Every feature is built with your child's privacy, security, and
-            wellbeing at the center. Parents deserve peace of mind.
-          </p>
         </motion.div>
 
         {/* Safety Features Grid */}
@@ -122,7 +133,6 @@ export default function SafetySection() {
 
         {/* Parent Dashboard Section */}
         <div className="grid lg:grid-cols-2 gap-10 items-center">
-          {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -163,52 +173,59 @@ export default function SafetySection() {
             </button>
           </motion.div>
 
-          {/* Dashboard Preview Card */}
+          {/* Visual: student photo + dashboard overlay */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="card bg-white border-primary-200 p-6 relative overflow-hidden"
+            className="relative"
           >
-            {/* Decorative top bar */}
-            <div className="flex items-center gap-2 mb-5 pb-4 border-b border-gray-100">
-              <div className="flex gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-red-400" />
-                <div className="w-3 h-3 rounded-full bg-yellow" />
-                <div className="w-3 h-3 rounded-full bg-green" />
-              </div>
-              <div className="flex-1 h-5 bg-gray-100 rounded-full mx-4" />
+            <div className="relative card overflow-hidden aspect-[4/3] border-primary-200 mb-4">
+              <SectionImage
+                src="/images/The_Scholar.d92aa1ba7abc5bbd377244bd1ee7151c.webp"
+                alt="Student engaged in a safe, supervised online learning session"
+                fill
+                sizes="(max-width: 1024px) 100vw, 45vw"
+              />
             </div>
 
-            {/* Dashboard widgets mockup */}
-            <div className="space-y-3">
-              {/* Child Progress bars */}
-              {["Emma — Python Explorers", "Liam — Chess Level 2", "Zoe — Science Lab"].map((child, i) => (
-                <div key={child} className="card-sm bg-surface border-primary-100 p-3">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-xs font-bold text-navy">{child}</span>
-                    <span className="text-[10px] font-semibold text-green bg-green-light px-2 py-0.5 rounded-full">
-                      {["78%", "65%", "91%"][i]} complete
-                    </span>
-                  </div>
-                  <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                    <div
-                      className="h-full rounded-full bg-gradient-to-r from-primary to-primary-light"
-                      style={{ width: ["78%", "65%", "91%"][i] }}
-                    />
-                  </div>
+            <div className="card bg-white border-primary-200 p-5 relative -mt-16 mx-4 sm:mx-8">
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-100">
+                <div className="flex gap-1.5">
+                  <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-yellow" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-green" />
                 </div>
-              ))}
+                <span className="text-xs font-bold text-navy ml-2">Parent Dashboard</span>
+              </div>
 
-              {/* Upcoming class */}
-              <div className="card-sm bg-yellow/10 border-yellow/40 p-3 flex items-center gap-3">
-                <div className="w-8 h-8 rounded-xl bg-yellow flex items-center justify-center flex-shrink-0">
-                  <Bell className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-navy">Next Class: Today 4:00 PM</p>
-                  <p className="text-[11px] text-subtle">Python Explorers — Emma</p>
+              <div className="space-y-2.5">
+                {["Emma — Python Explorers", "Liam — Chess Level 2"].map((child, i) => (
+                  <div key={child} className="card-sm bg-surface border-primary-100 p-3">
+                    <div className="flex justify-between items-center mb-1.5">
+                      <span className="text-xs font-bold text-navy">{child}</span>
+                      <span className="text-[10px] font-semibold text-green bg-green-light px-2 py-0.5 rounded-full">
+                        {["78%", "65%"][i]} complete
+                      </span>
+                    </div>
+                    <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                      <div
+                        className="h-full rounded-full bg-gradient-to-r from-primary to-primary-light"
+                        style={{ width: ["78%", "65%"][i] }}
+                      />
+                    </div>
+                  </div>
+                ))}
+
+                <div className="card-sm bg-yellow/10 border-yellow/40 p-3 flex items-center gap-3">
+                  <div className="w-7 h-7 rounded-lg bg-yellow flex items-center justify-center flex-shrink-0">
+                    <Bell className="w-3.5 h-3.5 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-navy">Next Class: Today 4:00 PM</p>
+                    <p className="text-[10px] text-subtle">Python Explorers — Emma</p>
+                  </div>
                 </div>
               </div>
             </div>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HelpCircle, ChevronDown } from "lucide-react";
+import SectionImage from "./ui/SectionImage";
 
 const faqs = [
   {
@@ -97,65 +98,94 @@ export default function FAQSection() {
 
   return (
     <section className="section-padding bg-surface">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-50 border-primary-200 text-primary mb-4">
-            <HelpCircle className="w-4 h-4" />
-            <span className="text-xs font-bold uppercase tracking-wider">
-              Frequently Asked
-            </span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-5 gap-10 lg:gap-12 items-start">
+          {/* Visual column */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-2 lg:sticky lg:top-24 hidden sm:block"
+          >
+            <div className="relative card overflow-hidden aspect-[4/5] border-primary-200 mb-4">
+              <SectionImage
+                src="/images/The_Friend.85cbfd7e36821d7569bc2fbfb9894a2c.webp"
+                alt="Students connecting in a safe, moderated online classroom"
+                fill
+                sizes="(max-width: 1024px) 100vw, 35vw"
+              />
+            </div>
+            <div className="card bg-primary border-primary-dark p-5">
+              <p className="font-display font-bold text-lg text-white mb-1">
+                Still have questions?
+              </p>
+              <p className="text-on-dark-muted text-sm mb-4">
+                Our support team is here to help parents and schools get started.
+              </p>
+              <button className="btn w-full py-3 font-bold bg-white text-primary border-primary-light">
+                <HelpCircle className="w-4 h-4 inline mr-2" />
+                Contact Support
+              </button>
+            </div>
+          </motion.div>
+
+          {/* FAQ content */}
+          <div className="lg:col-span-3">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center lg:text-left mb-10"
+            >
+              <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-50 border-primary-200 text-primary mb-4">
+                <HelpCircle className="w-4 h-4" />
+                <span className="text-xs font-bold uppercase tracking-wider">
+                  Frequently Asked
+                </span>
+              </div>
+              <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-navy mb-4">
+                Got{" "}
+                <span className="text-primary">Questions?</span>
+              </h2>
+              <p className="text-body text-lg leading-relaxed">
+                Everything parents and schools need to know before getting started.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="space-y-3"
+            >
+              {faqs.map((faq, i) => (
+                <FAQItem
+                  key={faq.q}
+                  q={faq.q}
+                  a={faq.a}
+                  isOpen={openIndex === i}
+                  onToggle={() => setOpenIndex(openIndex === i ? null : i)}
+                />
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-center mt-10 sm:hidden"
+            >
+              <button className="btn inline-flex items-center gap-2 px-6 py-3 font-bold text-navy bg-white border-gray-200">
+                <HelpCircle className="w-4 h-4" />
+                Contact Support
+              </button>
+            </motion.div>
           </div>
-          <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-navy mb-4">
-            Got{" "}
-            <span className="text-primary">Questions?</span>
-          </h2>
-          <p className="text-body text-lg leading-relaxed">
-            Everything parents and schools need to know before getting started.
-          </p>
-        </motion.div>
-
-        {/* FAQ Accordion */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="space-y-3"
-        >
-          {faqs.map((faq, i) => (
-            <FAQItem
-              key={faq.q}
-              q={faq.q}
-              a={faq.a}
-              isOpen={openIndex === i}
-              onToggle={() => setOpenIndex(openIndex === i ? null : i)}
-            />
-          ))}
-        </motion.div>
-
-        {/* Still have questions */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center mt-10"
-        >
-          <p className="text-body mb-3">
-            Still have questions? We're here to help.
-          </p>
-          <button className="btn inline-flex items-center gap-2 px-6 py-3 font-bold text-navy bg-white border-gray-200">
-            <HelpCircle className="w-4 h-4" />
-            Contact Support
-          </button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -2,13 +2,14 @@
 
 import { motion } from "framer-motion";
 import {
-  UserPlus,
-  Users,
+  ArrowRight,
   BookOpen,
   CreditCard,
+  UserPlus,
+  Users,
   Video,
-  ArrowRight,
 } from "lucide-react";
+import SectionImage from "./ui/SectionImage";
 
 const steps = [
   {
@@ -62,13 +63,13 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+        {/* Full-width header — keeps both columns aligned below */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-2xl mx-auto mb-14"
+          className="text-center max-w-2xl mx-auto mb-12"
         >
           <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-green-light border-green/50 text-green-dark mb-4">
             <UserPlus className="w-4 h-4" />
@@ -81,81 +82,100 @@ export default function HowItWorks() {
             <span className="text-primary">5 Easy Steps</span>
           </h2>
           <p className="text-body text-lg leading-relaxed">
-            From sign-up to your child's first live class — it's simpler than
+            From sign-up to your child&apos;s first live class — it&apos;s simpler than
             you think.
           </p>
         </motion.div>
 
-        {/* Steps — horizontal scroll on mobile, grid on desktop */}
-        <div className="relative">
-          {/* Connector line (desktop) */}
-          <div
-            className="absolute top-14 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-pink to-green hidden lg:block"
-            aria-hidden="true"
-            style={{ marginInline: "calc(10% + 28px)" }}
-          />
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 lg:items-center">
+          {/* Left: Visual column */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col gap-3"
+          >
+            <div className="relative card overflow-hidden aspect-[4/3]">
+              <SectionImage
+                src="/images/about01.jpg"
+                alt="Instructor reading with a young learner — the start of a learning journey"
+                fill
+                sizes="(max-width: 1024px) 100vw, 45vw"
+              />
+            </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
+            <div className="grid grid-cols-2 gap-3">
+              <div className="relative card overflow-hidden aspect-[4/3] border-primary-200">
+                <SectionImage
+                  src="/images/The_Scholar.d92aa1ba7abc5bbd377244bd1ee7151c.webp"
+                  alt="Student learning online with laptop and earbuds"
+                  fill
+                  sizes="(max-width: 1024px) 45vw, 22vw"
+                />
+              </div>
+              <div className="relative card overflow-hidden aspect-[4/3] border-sky-200">
+                <SectionImage
+                  src="/images/The_Traveler.883c94f365d9a10a4f93c224c51ef0a7.webp"
+                  alt="Student exploring languages and global cultures"
+                  fill
+                  sizes="(max-width: 1024px) 45vw, 22vw"
+                />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right: Steps timeline */}
+          <div className="flex flex-col gap-3">
             {steps.map((step, i) => {
               const Icon = step.icon;
               return (
                 <motion.div
                   key={step.number}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="flex flex-col items-center text-center gap-3"
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  className="flex gap-4 items-start my-1"
                 >
-                  {/* Icon Circle */}
-                  <div className="relative">
+                  <div className="relative flex-shrink-0">
                     <div
-                      className={`w-14 h-14 rounded-3xl ${step.color} flex items-center justify-center relative z-10 card-sm border-transparent`}
+                      className={`w-11 h-11 rounded-2xl ${step.color} flex items-center justify-center`}
                     >
-                      <Icon className="w-7 h-7 text-white" />
+                      <Icon className="w-5 h-5 text-white" />
                     </div>
-                    <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center z-20">
-                      <span className="text-[10px] font-bold text-navy">{step.number}</span>
+                    <div className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center">
+                      <span className="text-[9px] font-bold text-navy">{step.number}</span>
                     </div>
                   </div>
 
-                  {/* Text */}
-                  <div className={`card-sm ${step.lightBg} ${step.border} p-4 w-full`}>
-                    <h3 className="font-display font-bold text-base text-navy mb-1.5">
+                  <div className={`card-sm ${step.lightBg} ${step.border} p-3.5 flex-1`}>
+                    <h3 className="font-display font-bold text-sm sm:text-base text-navy mb-0.5">
                       {step.title}
                     </h3>
-                    <p className="text-xs text-body leading-relaxed">{step.desc}</p>
+                    <p className="text-xs sm:text-sm text-body leading-relaxed">{step.desc}</p>
                   </div>
-
-                  {/* Arrow (mobile only) */}
-                  {i < steps.length - 1 && (
-                    <ArrowRight
-                      className="w-5 h-5 text-gray-300 rotate-90 sm:hidden"
-                      aria-hidden="true"
-                    />
-                  )}
                 </motion.div>
               );
             })}
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="pt-2"
+            >
+              <button className="btn inline-flex items-center gap-2 px-8 py-4 font-bold bg-primary text-white border-primary-dark w-full sm:w-auto justify-center">
+                Start Your Learning Journey
+                <ArrowRight className="w-4 h-4" />
+              </button>
+              <p className="text-sm text-subtle mt-3 text-center sm:text-left">
+                No credit card required · Free trial available
+              </p>
+            </motion.div>
           </div>
         </div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="text-center mt-12"
-        >
-          <button className="btn inline-flex items-center gap-2 px-8 py-4 font-bold bg-primary text-white border-primary-dark">
-            Start Your Learning Journey
-            <ArrowRight className="w-4 h-4" />
-          </button>
-          <p className="text-sm text-subtle mt-3">
-            No credit card required · Free trial available
-          </p>
-        </motion.div>
       </div>
     </section>
   );

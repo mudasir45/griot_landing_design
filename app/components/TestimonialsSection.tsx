@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Quote, Star, MessageSquare } from "lucide-react";
+import SectionImage from "./ui/SectionImage";
 
 const testimonials = [
   {
@@ -58,7 +59,7 @@ export default function TestimonialsSection() {
   return (
     <section className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+        {/* Full-width header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -81,64 +82,100 @@ export default function TestimonialsSection() {
           </p>
         </motion.div>
 
-        {/* Testimonials Grid */}
-        <div className="grid sm:grid-cols-2 gap-5">
-          {testimonials.map((t, i) => (
-            <motion.div
-              key={t.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              whileHover={{ scale: 1 }}
-              className="card bg-white border-gray-200 p-6 flex flex-col gap-4 cursor-pointer"
-            >
-              {/* Stars + Tag */}
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <div className="flex gap-0.5">
-                  {[...Array(t.stars)].map((_, j) => (
-                    <Star
-                      key={j}
-                      className="w-4 h-4 fill-yellow text-yellow-dark"
-                    />
-                  ))}
-                </div>
-                <span
-                  className={`pill text-[11px] font-bold px-2.5 py-0.5 ${t.tagColor}`}
-                >
-                  {t.tag}
-                </span>
-              </div>
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 lg:items-center">
+          {/* Visual column */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col gap-3"
+          >
+            <div className="relative card overflow-hidden aspect-[4/3]">
+              <SectionImage
+                src="/images/banner01.png"
+                alt="Happy children learning together in a supportive classroom"
+                fill
+                sizes="(max-width: 1024px) 100vw, 45vw"
+              />
+            </div>
 
-              {/* Quote */}
-              <div className="relative">
-                <Quote
-                  className="absolute -top-1 -left-1 w-8 h-8 text-primary/10"
-                  aria-hidden="true"
+            <div className="grid grid-cols-2 gap-3">
+              <div className="relative card overflow-hidden aspect-[4/3] border-sky-200">
+                <SectionImage
+                  src="/images/The_Coder.4da186f687ce6f7459ecfac9704755dc.webp"
+                  alt="Parent-approved coding program"
+                  fill
+                  sizes="(max-width: 1024px) 45vw, 22vw"
                 />
-                <p className="text-body leading-relaxed pl-5 text-sm sm:text-base">
-                  "{t.quote}"
-                </p>
               </div>
+              <div className="relative card overflow-hidden aspect-[4/3] border-pink-200">
+                <SectionImage
+                  src="/images/The_Artist.1085a10836fc3a9c2389328070563306.webp"
+                  alt="Creative arts program loved by families"
+                  fill
+                  sizes="(max-width: 1024px) 45vw, 22vw"
+                />
+              </div>
+            </div>
+          </motion.div>
 
-              {/* Author */}
-              <div className="flex items-center gap-3 pt-3 border-t border-gray-100">
-                <div
-                  className={`w-10 h-10 rounded-2xl ${t.bg} flex items-center justify-center flex-shrink-0`}
-                >
-                  <span className="font-display font-bold text-sm text-white">
-                    {t.initials}
+          {/* Testimonials grid */}
+          <div className="grid sm:grid-cols-2 gap-4">
+            {testimonials.map((t, i) => (
+              <motion.div
+                key={t.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                whileHover={{ scale: 1 }}
+                className="card bg-white border-gray-200 p-5 flex flex-col gap-3 cursor-pointer h-full"
+              >
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                  <div className="flex gap-0.5">
+                    {[...Array(t.stars)].map((_, j) => (
+                      <Star
+                        key={j}
+                        className="w-4 h-4 fill-yellow text-yellow-dark"
+                      />
+                    ))}
+                  </div>
+                  <span
+                    className={`pill text-[11px] font-bold px-2.5 py-0.5 ${t.tagColor}`}
+                  >
+                    {t.tag}
                   </span>
                 </div>
-                <div>
-                  <p className="font-bold text-sm text-navy">{t.name}</p>
-                  <p className="text-xs text-subtle">
-                    {t.role} · {t.location}
+
+                <div className="relative flex-1">
+                  <Quote
+                    className="absolute -top-1 -left-1 w-7 h-7 text-primary/10"
+                    aria-hidden="true"
+                  />
+                  <p className="text-body leading-relaxed pl-4 text-sm">
+                    &ldquo;{t.quote}&rdquo;
                   </p>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+
+                <div className="flex items-center gap-3 pt-3 border-t border-gray-100 mt-auto">
+                  <div
+                    className={`w-9 h-9 rounded-2xl ${t.bg} flex items-center justify-center flex-shrink-0`}
+                  >
+                    <span className="font-display font-bold text-xs text-white">
+                      {t.initials}
+                    </span>
+                  </div>
+                  <div>
+                    <p className="font-bold text-sm text-navy">{t.name}</p>
+                    <p className="text-xs text-subtle">
+                      {t.role} · {t.location}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

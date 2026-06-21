@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check, Sparkles } from "lucide-react";
+import SectionImage from "./ui/SectionImage";
 
 const plans = [
   {
@@ -60,26 +61,40 @@ export default function PricingSection() {
   return (
     <section id="pricing" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Visual header with image */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-2xl mx-auto mb-12"
+          className="grid lg:grid-cols-2 gap-10 items-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-yellow/20 border-yellow/50 text-yellow-dark mb-4">
-            <Sparkles className="w-4 h-4" />
-            <span className="text-xs font-bold uppercase tracking-wider">
-              Plans & Pricing
-            </span>
+          <div className="text-center lg:text-left order-2 lg:order-1">
+            <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-yellow/20 border-yellow/50 text-yellow-dark mb-4">
+              <Sparkles className="w-4 h-4" />
+              <span className="text-xs font-bold uppercase tracking-wider">
+                Plans & Pricing
+              </span>
+            </div>
+            <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-navy mb-4">
+              Simple Plans for{" "}
+              <span className="text-primary">Every Family</span>
+            </h2>
+            <p className="text-body text-lg leading-relaxed">
+              Start with a free trial. No hidden fees, no ads, cancel anytime.
+            </p>
           </div>
-          <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-navy mb-4">
-            Simple Plans for{" "}
-            <span className="text-primary">Every Family</span>
-          </h2>
-          <p className="text-body text-lg leading-relaxed">
-            Start with a free trial. No hidden fees, no ads, cancel anytime.
-          </p>
+
+          <div className="order-1 lg:order-2">
+            <div className="relative card overflow-hidden aspect-[16/10] border-primary-200">
+              <SectionImage
+                src="/images/about01.jpg"
+                alt="Parent and child enjoying a personalized learning experience"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-5 items-stretch">
