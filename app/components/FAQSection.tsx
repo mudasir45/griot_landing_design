@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HelpCircle, ChevronDown } from "lucide-react";
@@ -146,10 +147,13 @@ export default function FAQSection() {
               <p className="text-on-dark-muted text-sm mb-4">
                 Our support team is here to help parents and schools get started.
               </p>
-              <button className="btn w-full py-3 font-bold bg-white text-primary border-primary-light">
-                <HelpCircle className="w-4 h-4 inline mr-2" />
+              <Link
+                href="/contact"
+                className="btn w-full py-3 font-bold bg-white text-primary border-primary-light inline-flex items-center justify-center"
+              >
+                <HelpCircle className="w-4 h-4 mr-2" />
                 Contact Support
-              </button>
+              </Link>
             </div>
           </motion.div>
 

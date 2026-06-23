@@ -98,7 +98,7 @@ export default function Hero() {
                 <ArrowRight className="w-4 h-4" />
               </button>
               <a
-                href="#courses"
+                href="/courses"
                 className="btn inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold bg-white text-navy border-border-strong w-full sm:w-auto"
               >
                 <Play className="w-4 h-4 fill-primary text-primary" />

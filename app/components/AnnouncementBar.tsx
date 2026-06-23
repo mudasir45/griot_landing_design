@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { X, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { X } from "lucide-react";
 
 export default function AnnouncementBar() {
   const [visible, setVisible] = useState(true);
@@ -9,23 +10,22 @@ export default function AnnouncementBar() {
   if (!visible) return null;
 
   return (
-    <div className="relative bg-primary text-white text-center px-4 sm:px-6 py-2.5 flex items-center justify-center gap-2 pr-10 sm:pr-12">
-      <Sparkles className="w-3.5 h-3.5 flex-shrink-0 hidden sm:block" aria-hidden="true" />
-      <p className="text-[11px] sm:text-xs md:text-sm font-semibold leading-snug">
-        Summer STEM Camps now enrolling — spots filling fast!{" "}
-        <a
-          href="#courses"
-          className="underline underline-offset-2 hover:text-yellow transition-colors font-bold whitespace-nowrap"
+    <div className="relative bg-primary-50 border-b border-primary-100 text-center px-4 sm:px-6 py-2 flex items-center justify-center pr-10">
+      <p className="text-xs sm:text-sm font-medium text-body leading-snug">
+        Summer camps are open —{" "}
+        <Link
+          href="/courses"
+          className="font-bold text-primary hover:text-primary-dark transition-colors"
         >
-          Explore classes →
-        </a>
+          browse classes
+        </Link>
       </p>
       <button
         onClick={() => setVisible(false)}
-        className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-white/20 rounded-lg transition-colors cursor-pointer"
-        aria-label="Close announcement"
+        className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-md hover:bg-primary-100 transition-colors cursor-pointer"
+        aria-label="Dismiss"
       >
-        <X className="w-3.5 h-3.5" />
+        <X className="w-3.5 h-3.5 text-subtle" />
       </button>
     </div>
   );

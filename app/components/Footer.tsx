@@ -4,14 +4,15 @@ import { GraduationCap, Globe, MessageCircle, Mail } from "lucide-react";
 const footerLinks = {
   "Learning Path": [
     { label: "Pricing & Plans", href: "#" },
-    { label: "Course Catalog", href: "#courses" },
+    { label: "Course Catalog", href: "/courses" },
     { label: "Certification Tracking", href: "#" },
     { label: "Scholar Database", href: "#" },
     { label: "Library Access", href: "#" },
   ],
   "The Academy": [
-    { label: "About Our Ethos", href: "#" },
-    { label: "Partner Program", href: "#" },
+    { label: "About Our Ethos", href: "/about" },
+    { label: "Contact Us", href: "/contact" },
+    { label: "Partner Program", href: "/schools" },
     { label: "Research Journal", href: "#" },
     { label: "Careers", href: "#" },
   ],
@@ -49,7 +50,7 @@ export default function Footer() {
               {[
                 { icon: Globe, href: "#", label: "Website" },
                 { icon: MessageCircle, href: "#", label: "Community" },
-                { icon: Mail, href: "#", label: "Email" },
+                { icon: Mail, href: "/contact", label: "Email" },
               ].map(({ icon: Icon, href, label }) => (
                 <Link
                   key={label}

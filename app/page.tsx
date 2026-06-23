@@ -1,6 +1,6 @@
 import AnnouncementBar from "./components/AnnouncementBar";
 import CoursesSection from "./components/CoursesSection";
-import DistrictCTA from "./components/DistrictCTA";
+import CoursesSectionOverlap from "./components/CoursesSectionOverlap";
 import FAQSection from "./components/FAQSection";
 import FeaturesSection from "./components/FeaturesSection";
 import FinalCTA from "./components/FinalCTA";
@@ -20,14 +20,13 @@ export default function Home() {
       <main>
         <Hero />
         <CoursesSection />
+        <CoursesSectionOverlap />
         <FeaturesSection />
         <HowItWorks />
         <SafetySection />
         <InstructorsSection />
         <TestimonialsSection />
-        <DistrictCTA />
         <FAQSection />
-        {/* <PricingSection /> */}
         <FinalCTA />
       </main>
       <Footer />

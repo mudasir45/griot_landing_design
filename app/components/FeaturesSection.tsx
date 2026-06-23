@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   Monitor,
@@ -249,9 +250,12 @@ export default function FeaturesSection() {
                 learning frameworks that fit your goals.
               </p>
             </div>
-            <button className="btn w-full py-3 font-bold bg-white text-primary border-primary-light">
+            <Link
+              href="/schools"
+              className="btn w-full py-3 font-bold bg-white text-primary border-primary-light inline-flex items-center justify-center"
+            >
               Talk to Our Team
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>
