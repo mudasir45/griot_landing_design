@@ -1,90 +1,90 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  Monitor,
-  MapPin,
-  School,
   Building2,
-  Tent,
   CheckCircle2,
+  MapPin,
+  Monitor,
+  School,
+  Tent,
 } from "lucide-react";
+import Link from "next/link";
 import SectionImage from "./ui/SectionImage";
 
 const features = [
   {
     icon: Monitor,
-    title: "Live Online Classes",
-    desc: "Interactive virtual classrooms with expert-led instruction — accessible from anywhere in the world.",
+    title: "Live Guided Classes",
+    desc: "Students get real-time instruction, room to ask questions, and a weekly rhythm that builds habits.",
     color: "text-primary",
     iconBg: "bg-primary-100",
     image: "/images/The_Friend.85cbfd7e36821d7569bc2fbfb9894a2c.webp",
     imageAlt: "Students connecting in a live online video classroom",
     highlights: [
-      "Small class sizes (max 12 students)",
-      "Real-time Q&A and collaboration",
-      "Session recordings available",
+      "Small-group instruction",
+      "Real-time discussion and guidance",
+      "Structured weekly class rhythm",
     ],
     featured: true,
   },
   {
     icon: MapPin,
-    title: "In-Person Enrichment",
-    desc: "Hands-on collaborative projects at local community hubs, turning digital skills into tangible creations.",
+    title: "Hands-On Practice",
+    desc: "Guided practice helps students review skills, complete activities, and keep learning between live sessions.",
     color: "text-orange",
     iconBg: "bg-orange-100",
     image: "/images/facility-bg.jpg",
     imageAlt: "Instructor guiding children in a hands-on learning session",
     highlights: [
-      "Locally hosted learning hubs",
-      "Project-based curriculum",
-      "Peer collaboration focus",
+      "Practice between live classes",
+      "Assignments and guided activities",
+      "Skills reinforced step by step",
     ],
     featured: true,
   },
   {
     icon: School,
     title: "School Programs",
-    desc: "Seamlessly integrated curriculum for private and public schools — no extra setup required.",
+    desc: "Griot can support after-school programs, enrichment blocks, and school partnership pilots for groups of students.",
     color: "text-sky",
     iconBg: "bg-sky-100",
     image: "/images/banner01.png",
     imageAlt: "Children learning collaboratively in a classroom setting",
     highlights: [
-      "Plugs into existing schedules",
-      "Aligned with Common Core",
-      "Teacher training & support",
+      "After-school and enrichment blocks",
+      "Live instruction for groups",
+      "Progress visibility for organizers",
     ],
     featured: false,
   },
   {
     icon: Building2,
-    title: "District Partnerships",
-    desc: "Scalable educational infrastructure designed to support thousands of students across multiple campuses.",
+    title: "Group & Community Programs",
+    desc: "Homeschool groups and community organizers can explore chess, coding, robotics, math, and AI literacy programming.",
     color: "text-green",
     iconBg: "bg-green-light",
     image: "/images/The_Scholar.d92aa1ba7abc5bbd377244bd1ee7151c.webp",
     imageAlt: "Student engaged in structured online learning",
     highlights: [
-      "Centralized admin dashboard",
-      "District-wide data analytics",
-      "Custom program branding",
+      "Group scheduling support",
+      "Program fit by grade band",
+      "Cohort and pilot options",
     ],
     featured: false,
   },
   {
     icon: Tent,
-    title: "Summer Camps",
-    desc: "Immersive seasonal programs focusing on high-impact STEM, arts, and enrichment skills.",
+    title: "Cohort Programs",
+    desc: "Families can join early cohorts in chess, coding, robotics, math, AI literacy, and STEM with a clear enrollment path.",
     color: "text-pink",
     iconBg: "bg-pink-100",
     image: "/images/The_Explorer.659eb58be482e98a1c1bf3bf26cd24ef.webp",
     imageAlt: "Young explorer on an adventurous summer learning journey",
     highlights: [
-      "Full-day and half-day options",
-      "Ages 6–16",
-      "Certificate of completion",
+      "Early cohort enrollment",
+      "Small-group learning format",
+      "Clear next steps for families",
     ],
     featured: false,
   },
@@ -110,17 +110,17 @@ export default function FeaturesSection() {
           <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-orange-50 border-orange-200 text-orange mb-4">
             <Monitor className="w-4 h-4" />
             <span className="text-xs font-bold uppercase tracking-wider">
-              What We Offer
+              How Students Learn
             </span>
           </div>
           <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
-            One Platform,{" "}
-            <span className="text-primary">Every Format</span>
+            Students learn by{" "}
+            <span className="text-primary">thinking, building, and explaining.</span>
           </h2>
           <p className="text-body text-base sm:text-lg leading-relaxed px-1">
-            Whether online, in-person, or through your school — Griot Academy
-            delivers unified learning solutions tailored for every student and
-            institution.
+            In Griot Academy programs, students solve problems, test ideas, ask
+            questions, and share what they are learning. The experience is
+            structured enough for progress and flexible enough for questions.
           </p>
         </motion.div>
 
@@ -243,18 +243,18 @@ export default function FeaturesSection() {
             />
             <div>
               <h3 className="font-display font-bold text-2xl text-white mb-2">
-                Need something custom?
+                Bring Griot to your school.
               </h3>
               <p className="text-on-dark-muted text-sm leading-relaxed">
-                We work with districts and institutions to build tailored
-                learning frameworks that fit your goals.
+                Schools and groups can explore chess, coding, robotics, math, AI
+                literacy, and STEM programming for students.
               </p>
             </div>
             <Link
               href="/schools"
               className="btn w-full py-3 font-bold bg-white text-primary border-primary-light inline-flex items-center justify-center"
             >
-              Talk to Our Team
+              Request School Demo
             </Link>
           </motion.div>
         </div>

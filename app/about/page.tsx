@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import AnnouncementBar from "../components/AnnouncementBar";
 import AboutPageContent from "../components/about/AboutPageContent";
+import AnnouncementBar from "../components/AnnouncementBar";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 export const metadata: Metadata = {
   title: "About Us | Griot Academy",
   description:
-    "Learn about Griot Academy's mission to deliver joyful, safe, and expert-led online learning for kids ages 4–18.",
+    "Learn how Griot Academy offers structured K-8 enrichment in chess, coding, robotics, math, and AI literacy with live classes and parent-visible progress.",
 };
 
 export default function AboutPage() {

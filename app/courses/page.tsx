@@ -3,15 +3,21 @@ import AnnouncementBar from "../components/AnnouncementBar";
 import CourseCatalog from "../components/courses/CourseCatalog";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { getCourseCategories, getPublicCourses } from "../lib/courses-data";
 import { BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Course Catalog | Griot Academy",
+  title: "Programs | Griot Academy",
   description:
-    "Browse 200+ expert-led live courses in coding, chess, robotics, arts, science, and more for kids ages 4–18.",
+    "Compare Griot Academy programs in chess, coding, robotics, math, and AI literacy for K-8 students. Book a trial class or join an early cohort.",
 };
 
-export default function CoursesPage() {
+export default async function CoursesPage() {
+  const [courses, categories] = await Promise.all([
+    getPublicCourses(),
+    getCourseCategories(),
+  ]);
+
   return (
     <>
       <AnnouncementBar />
@@ -30,23 +36,23 @@ export default function CoursesPage() {
             <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-50 border-primary-200 text-primary mb-4">
               <BookOpen className="w-4 h-4" />
               <span className="text-xs font-bold uppercase tracking-wider">
-                Course Catalog
+                Program Areas
               </span>
             </div>
             <h1 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
-              Explore What{" "}
-              <span className="text-primary">You Love</span>
+              Compare Griot Academy{" "}
+              <span className="text-primary">programs.</span>
             </h1>
             <p className="text-body text-base sm:text-lg max-w-xl leading-relaxed mx-auto">
-              200+ expert-led courses across subjects your child is passionate
-              about. Live, interactive, and outcome-focused.
+              Chess, coding, robotics, math, and AI literacy programs for K-8
+              students. Start with one program, then add another as your child grows.
             </p>
           </div>
         </section>
 
         <section className="section-padding bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <CourseCatalog />
+            <CourseCatalog courses={courses} categories={categories} />
           </div>
         </section>
       </main>

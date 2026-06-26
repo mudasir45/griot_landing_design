@@ -5,9 +5,9 @@ import Navbar from "../components/Navbar";
 import SchoolsPageContent from "../components/schools/SchoolsPageContent";
 
 export const metadata: Metadata = {
-  title: "Schools & Districts | Griot Academy",
+  title: "Schools & Groups | Griot Academy",
   description:
-    "Bring Griot Academy to your school or district. Scalable enrichment programs, admin dashboards, curriculum alignment, and dedicated partnership support.",
+    "Bring Griot Academy to your school or group. Explore chess, coding, robotics, math, AI literacy, and STEM programming for K-8 students.",
 };
 
 export default function SchoolsPage() {

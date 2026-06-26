@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar";
 export const metadata: Metadata = {
   title: "Contact Us | Griot Academy",
   description:
-    "Get in touch with Griot Academy for enrollment help, school partnerships, district licensing, or technical support.",
+    "Contact Griot Academy to book a trial class, join an early cohort, request a school demo, or ask about programs for K-8 students.",
 };
 
 export default function ContactPage() {

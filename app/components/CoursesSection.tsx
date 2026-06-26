@@ -1,12 +1,16 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { Brain, ChevronRight } from "lucide-react";
-import { courses } from "../data/courses";
+import Link from "next/link";
+import type { Course } from "../data/courses";
 import CourseCard from "./CourseCard";
 
-export default function CoursesSection() {
+interface CoursesSectionProps {
+  courses: Course[];
+}
+
+export default function CoursesSection({ courses }: CoursesSectionProps) {
   const featuredCourses = courses.slice(0, 6);
 
   return (
@@ -22,16 +26,15 @@ export default function CoursesSection() {
           <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-50 border-primary-200 text-primary mb-4">
             <Brain className="w-4 h-4" />
             <span className="text-xs font-bold uppercase tracking-wider">
-              Course Catalog
+              Program Areas
             </span>
           </div>
           <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
-            Explore What{" "}
-            <span className="text-primary">You Love</span>
+            Programs that build{" "}
+            <span className="text-primary">focus, problem-solving, and confidence.</span>
           </h2>
           <p className="text-body text-center text-base sm:text-lg max-w-xl leading-relaxed w-full mx-auto px-1">
-            200+ expert-led courses across subjects your child is passionate
-            about. Live, interactive, and outcome-focused.
+            Start with one program, then add another as your child grows.
           </p>
         </motion.div>
 
@@ -52,7 +55,7 @@ export default function CoursesSection() {
             href="/courses"
             className="btn inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 font-bold text-navy bg-white border-gray-200 w-full sm:w-auto"
           >
-            View All 200+ Courses
+            View All Programs
             <ChevronRight className="w-4 h-4" />
           </Link>
         </motion.div>

@@ -5,13 +5,13 @@
 /* ──────────────────────────────────────────────────────────── */
 
 @theme inline {
-  /* Brand — rich violet, not washed out */
-  --color-primary:       #6D28D9;
-  --color-primary-light: #8B5CF6;
-  --color-primary-dark:  #4C1D95;
-  --color-primary-50:    #F5F3FF;
-  --color-primary-100:   #EDE9FE;
-  --color-primary-200:   #DDD6FE;
+  /* Brand — warm amber gold */
+  --color-primary:       #FBBF24;
+  --color-primary-light: #FCD34D;
+  --color-primary-dark:  #D97706;
+  --color-primary-50:    #FFFBEB;
+  --color-primary-100:   #FEF3C7;
+  --color-primary-200:   #FDE68A;
 
   --color-yellow:        #F59E0B;
   --color-yellow-dark:   #D97706;

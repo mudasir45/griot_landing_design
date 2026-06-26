@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import {
   ArrowRight,
+  Play,
   ShieldCheck,
   Star,
-  Play,
 } from "lucide-react";
 import SectionImage from "./ui/SectionImage";
 
@@ -33,7 +33,7 @@ export default function Hero() {
               <div className="pill inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-green-light border-green/50 text-green-dark max-w-full">
                 <ShieldCheck className="w-4 h-4 flex-shrink-0" />
                 <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wide">
-                  Parent-Approved · COPPA Safe
+                  K-8 Enrichment · Structured Programs
                 </span>
               </div>
             </motion.div>
@@ -44,17 +44,17 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] text-navy">
-                Joyful{" "}
+                K-8{" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10 text-primary">Learning</span>
+                  <span className="relative z-10 text-primary">enrichment</span>
                   <span
                     className="absolute -bottom-1 left-0 right-0 h-2 sm:h-3 bg-yellow/60 rounded-full -z-0"
                     aria-hidden="true"
                   />
                 </span>
                 <br />
-                Made{" "}
-                <span className="text-orange">Safe.</span>
+                in chess, coding, robotics, math, and{" "}
+                <span className="text-orange">AI literacy.</span>
               </h1>
             </motion.div>
 
@@ -64,8 +64,8 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg lg:text-xl text-body max-w-lg mx-auto lg:mx-0 leading-relaxed"
             >
-              200+ live online courses for curious kids ages 4–18 — led by
-              expert instructors in a safe, structured environment.
+              Live classes and guided practice that help students build focus,
+              problem-solving, confidence, and technology skills.
             </motion.p>
 
             <motion.div
@@ -94,7 +94,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start w-full sm:w-auto"
             >
               <button className="btn inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold bg-primary text-white border-primary-dark w-full sm:w-auto">
-                Get Started Free
+                Book a Trial Class
                 <ArrowRight className="w-4 h-4" />
               </button>
               <a
@@ -102,7 +102,7 @@ export default function Hero() {
                 className="btn inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold bg-white text-navy border-border-strong w-full sm:w-auto"
               >
                 <Play className="w-4 h-4 fill-primary text-primary" />
-                Browse Classes
+                Join Founding Families
               </a>
             </motion.div>
 
@@ -113,9 +113,9 @@ export default function Hero() {
               className="grid grid-cols-3 gap-2 sm:flex sm:items-center sm:justify-center lg:justify-start sm:gap-6 pt-2"
             >
               {[
-                { value: "10K+", label: "Students" },
-                { value: "200+", label: "Courses" },
-                { value: "50+", label: "Schools" },
+                { value: "5", label: "Programs" },
+                { value: "K–8", label: "Grades" },
+                { value: "Trial", label: "First Enrollment" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center lg:text-left">
                   <p className="font-display font-extrabold text-xl sm:text-2xl text-navy">{stat.value}</p>
@@ -145,7 +145,7 @@ export default function Hero() {
               </div>
 
               {/* Floating personas — tablet+ only */}
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, x: 20, y: 20 }}
                 animate={{ opacity: 1, x: 0, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
@@ -174,7 +174,7 @@ export default function Hero() {
                   sizes="160px"
                   className="rounded-[20px]"
                 />
-              </motion.div>
+              </motion.div> */}
 
               {/* Safety badge — desktop overlay */}
               <motion.div
@@ -188,10 +188,10 @@ export default function Hero() {
                 </div>
                 <div>
                   <p className="font-bold text-xs sm:text-sm text-navy leading-none">
-                    Safe Environment
+                    Structured Programs
                   </p>
                   <p className="text-[10px] sm:text-xs text-body font-medium mt-0.5">
-                    Pre-K to Grade 8
+                    Grades K–8
                   </p>
                 </div>
               </motion.div>
@@ -202,7 +202,7 @@ export default function Hero() {
               <div className="grid grid-cols-2 gap-3">
                 <div className="relative card overflow-hidden aspect-[4/3] border-sky-200">
                   <SectionImage
-                    src="/images/The_Coder.4da186f687ce6f7459ecfac9704755dc.webp"
+                    src="/images/Gemini_Generated_Image_18pfk18pfk18pfk1 (1).png"
                     alt="Young coder learning Python"
                     fill
                     sizes="45vw"
@@ -222,8 +222,8 @@ export default function Hero() {
                   <ShieldCheck className="w-5 h-5 text-green" />
                 </div>
                 <div>
-                  <p className="font-bold text-sm text-navy leading-none">Safe Environment</p>
-                  <p className="text-xs text-body font-medium mt-0.5">Pre-K to Grade 8</p>
+                  <p className="font-bold text-sm text-navy leading-none">Structured Programs</p>
+                  <p className="text-xs text-body font-medium mt-0.5">Grades K–8</p>
                 </div>
               </div>
             </div>

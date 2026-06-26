@@ -1,35 +1,35 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDown, HelpCircle } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { HelpCircle, ChevronDown } from "lucide-react";
 import SectionImage from "./ui/SectionImage";
 
 const faqs = [
   {
-    q: "Is Griot Academy safe for younger children?",
-    a: "Absolutely. All sessions are moderated by trained staff, and our platform is fully COPPA compliant. We never display ads, sell data, or allow unmoderated peer communication. Every instructor undergoes background checks before joining our team.",
+    q: "Which program should my child start with?",
+    a: "Start with the skill your child needs to practice most: focus, technology creation, hands-on building, math confidence, or responsible AI use. If you are not sure, book a trial class and share your child's grade and interests.",
   },
   {
-    q: "How do school districts integrate the curriculum?",
-    a: "Our dedicated district success team handles onboarding end-to-end — from LMS integration to faculty training. Most schools are fully live within 2–3 weeks. We align all content with state standards and provide an admin dashboard for tracking outcomes.",
+    q: "Are all programs open for every grade band?",
+    a: "Availability may vary by grade band, cohort schedule, and program status. Use the public status labels on each program card for the next action.",
   },
   {
-    q: "What hardware is required for online sessions?",
-    a: "Just a device with a camera, microphone, and a modern browser (Chrome, Safari, or Edge). No downloads or plugins needed. For Robotics Makers Lab, we provide optional hardware kits for in-person camps.",
+    q: "Can my child take more than one program?",
+    a: "Yes. Students can begin with one program and add another as their interests and schedule allow.",
   },
   {
-    q: "How much does Griot Academy cost?",
-    a: "We offer flexible plans — individual courses starting at $25/session, monthly memberships for families, and institutional pricing for schools and districts. First-time families get a free trial session for any course.",
+    q: "Will parents be able to see progress?",
+    a: "Griot is designed to give parents visibility into enrolled programs, lessons, assignments, quizzes, certificates, and messages.",
   },
   {
-    q: "Can parents monitor their child's progress?",
-    a: "Yes! The parent dashboard provides real-time visibility into attendance, lesson completion, quiz scores, and instructor feedback. You'll also receive automated email summaries after each session.",
+    q: "How do I book a trial class?",
+    a: "Choose an interest area and tell us your child's grade. Griot can recommend a trial option and share what to expect before the session.",
   },
   {
     q: "What age range does Griot Academy serve?",
-    a: "We serve learners from Pre-K through Grade 8 (ages 4–14) for standard programs. Our advanced STEM and coding tracks extend to Grade 12 for high-achieving students.",
+    a: "Griot Academy serves K-8 students with structured enrichment in chess, coding, robotics, math, and AI literacy.",
   },
 ];
 
@@ -46,9 +46,8 @@ function FAQItem({
 }) {
   return (
     <motion.div
-      className={`card bg-white overflow-hidden cursor-pointer transition-colors duration-200 ${
-        isOpen ? "border-primary-300" : "border-border hover:border-primary-200"
-      }`}
+      className={`card bg-white overflow-hidden cursor-pointer transition-colors duration-200 ${isOpen ? "border-primary-300" : "border-border hover:border-primary-200"
+        }`}
     >
       <button
         className="w-full flex items-start justify-between gap-3 sm:gap-4 p-4 sm:p-5 text-left"
@@ -56,9 +55,8 @@ function FAQItem({
         aria-expanded={isOpen}
       >
         <span
-          className={`font-bold text-sm sm:text-base leading-snug transition-colors ${
-            isOpen ? "text-primary" : "text-navy"
-          }`}
+          className={`font-bold text-sm sm:text-base leading-snug transition-colors ${isOpen ? "text-primary" : "text-navy"
+            }`}
         >
           {q}
         </span>
@@ -68,9 +66,8 @@ function FAQItem({
           className="flex-shrink-0 mt-0.5"
         >
           <ChevronDown
-            className={`w-5 h-5 transition-colors ${
-              isOpen ? "text-primary" : "text-subtle"
-            }`}
+            className={`w-5 h-5 transition-colors ${isOpen ? "text-primary" : "text-subtle"
+              }`}
           />
         </motion.div>
       </button>
@@ -115,8 +112,8 @@ export default function FAQSection() {
             </span>
           </div>
           <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
-            Got{" "}
-            <span className="text-primary">Questions?</span>
+            Questions parents ask{" "}
+            <span className="text-primary">before getting started.</span>
           </h2>
           <p className="text-body text-base sm:text-lg leading-relaxed px-1">
             Everything parents and schools need to know before getting started.
@@ -152,7 +149,7 @@ export default function FAQSection() {
                 className="btn w-full py-3 font-bold bg-white text-primary border-primary-light inline-flex items-center justify-center"
               >
                 <HelpCircle className="w-4 h-4 mr-2" />
-                Contact Support
+                Contact Us
               </Link>
             </div>
           </motion.div>

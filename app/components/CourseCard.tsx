@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 import type { Course } from "../data/courses";
 import { courseIcons } from "../data/courses";
 import SectionImage from "./ui/SectionImage";
@@ -61,7 +61,7 @@ export default function CourseCard({ course, index = 0 }: CourseCardProps) {
           <h3 className="font-display font-bold text-lg sm:text-xl text-navy group-hover:text-primary transition-colors">
             {course.title}
           </h3>
-          <p className="text-sm text-body leading-relaxed flex-1">{course.desc}</p>
+          {/* <p className="text-sm text-body leading-relaxed flex-1">{course.desc}</p> */}
 
           <div className="flex items-center justify-between pt-3 border-t border-black/5">
             <span className="text-xs font-semibold text-subtle">{course.sessionLength}</span>

@@ -14,7 +14,7 @@ export default function CourseNotFound() {
           href="/courses"
           className="btn inline-flex items-center justify-center px-6 py-3 font-bold bg-primary text-white border-primary-dark"
         >
-          Browse All Courses
+          View Programs
         </Link>
       </div>
     </div>

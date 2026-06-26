@@ -1,13 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, GraduationCap } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const navLinks = [
-  { label: "Classes", href: "/courses" },
+  { label: "Programs", href: "/courses" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -32,9 +33,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/98 border-b border-border shadow-sm" : "bg-white border-b border-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/98 border-b border-border shadow-sm" : "bg-white border-b border-transparent"
+        }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16">
@@ -43,9 +43,14 @@ export default function Navbar() {
             className="flex items-center gap-2 group flex-shrink-0"
             aria-label="Griot Academy home"
           >
-            <div className="w-8 h-8 sm:w-9 sm:h-9 bg-primary rounded-xl flex items-center justify-center group-hover:opacity-90 transition-opacity">
-              <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-            </div>
+            <Image
+              src="/logo.png"
+              alt=""
+              width={36}
+              height={36}
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl object-contain group-hover:opacity-90 transition-opacity"
+              unoptimized
+            />
             <span className="font-display font-bold text-base sm:text-lg text-navy">
               Griot Academy
             </span>
@@ -59,11 +64,10 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-semibold transition-colors duration-200 ${
-                  isActive(link.href)
-                    ? "text-primary"
-                    : "text-body hover:text-navy"
-                }`}
+                className={`text-sm font-semibold transition-colors duration-200 ${isActive(link.href)
+                  ? "text-primary"
+                  : "text-body hover:text-navy"
+                  }`}
               >
                 {link.label}
               </Link>
@@ -75,7 +79,7 @@ export default function Navbar() {
               Log In
             </button>
             <button className="btn px-5 py-2.5 text-sm font-bold bg-primary text-white border-primary-dark">
-              Get Started Free
+              Book a Trial Class
             </button>
           </div>
 
@@ -108,11 +112,10 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`block px-3 py-3 text-base font-semibold rounded-xl transition-colors ${
-                    isActive(link.href)
-                      ? "text-primary bg-primary-50"
-                      : "text-navy hover:bg-surface"
-                  }`}
+                  className={`block px-3 py-3 text-base font-semibold rounded-xl transition-colors ${isActive(link.href)
+                    ? "text-primary bg-primary-50"
+                    : "text-navy hover:bg-surface"
+                    }`}
                 >
                   {link.label}
                 </Link>
@@ -122,7 +125,7 @@ export default function Navbar() {
                   Log In
                 </button>
                 <button className="btn w-full py-3 text-sm font-bold bg-primary text-white border-primary-dark">
-                  Get Started Free
+                  Book a Trial Class
                 </button>
               </div>
             </div>

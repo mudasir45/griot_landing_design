@@ -15,8 +15,8 @@ const steps = [
   {
     number: "01",
     icon: UserPlus,
-    title: "Create Your Account",
-    desc: "Sign up in under 2 minutes. Fast, secure setup for your whole family.",
+    title: "Tell us about your child",
+    desc: "Share your child's grade, interests, and preferred schedule.",
     color: "bg-primary",
     lightBg: "bg-primary-50",
     border: "border-primary-200",
@@ -24,8 +24,8 @@ const steps = [
   {
     number: "02",
     icon: Users,
-    title: "Add Your Children",
-    desc: "Create personalized learner profiles for each child with interests and skill level.",
+    title: "Choose a program or trial",
+    desc: "Start with chess, coding, robotics, math, AI literacy, or a general STEM trial.",
     color: "bg-orange",
     lightBg: "bg-orange-50",
     border: "border-orange-200",
@@ -33,8 +33,8 @@ const steps = [
   {
     number: "03",
     icon: BookOpen,
-    title: "Browse Programs",
-    desc: "Discover curated educational paths matched to your child's age and goals.",
+    title: "Join a guided class",
+    desc: "Students learn with structure, adult guidance, and room to ask questions.",
     color: "bg-sky-500",
     lightBg: "bg-sky-50",
     border: "border-sky-200",
@@ -42,8 +42,8 @@ const steps = [
   {
     number: "04",
     icon: CreditCard,
-    title: "Enroll in Minutes",
-    desc: "Simple one-click registration. Secure payments via Stripe — no surprises.",
+    title: "Track progress",
+    desc: "Parents can see what their child is learning, what is coming next, and where support may help.",
     color: "bg-pink",
     lightBg: "bg-pink-50",
     border: "border-pink-200",
@@ -51,8 +51,8 @@ const steps = [
   {
     number: "05",
     icon: Video,
-    title: "Start Learning!",
-    desc: "Join live sessions, track progress, and watch your child's curiosity soar.",
+    title: "Continue with the right path",
+    desc: "Families can enroll in a cohort, add another program, or use guided practice between sessions.",
     color: "bg-green",
     lightBg: "bg-green-50",
     border: "border-green-200",
@@ -74,16 +74,15 @@ export default function HowItWorks() {
           <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-green-light border-green/50 text-green-dark mb-4">
             <UserPlus className="w-4 h-4" />
             <span className="text-xs font-bold uppercase tracking-wider">
-              Your Journey Starts Here
+              From Interest to Class
             </span>
           </div>
           <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
-            Up and Running in{" "}
-            <span className="text-primary">5 Easy Steps</span>
+            A simple path from{" "}
+            <span className="text-primary">interest to class.</span>
           </h2>
           <p className="text-body text-base sm:text-lg leading-relaxed px-1">
-            From sign-up to your child&apos;s first live class — it&apos;s simpler than
-            you think.
+            Parents should know what happens before they click.
           </p>
         </motion.div>
 
@@ -167,11 +166,11 @@ export default function HowItWorks() {
               className="pt-2"
             >
               <button className="btn inline-flex items-center gap-2 px-8 py-4 font-bold bg-primary text-white border-primary-dark w-full sm:w-auto justify-center">
-                Start Your Learning Journey
+                Book a Trial Class
                 <ArrowRight className="w-4 h-4" />
               </button>
               <p className="text-sm text-subtle mt-3 text-center sm:text-left">
-                No credit card required · Free trial available
+                Tell us your child&apos;s grade and interests to get started
               </p>
             </motion.div>
           </div>

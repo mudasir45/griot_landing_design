@@ -2,68 +2,68 @@
 
 import { motion } from "framer-motion";
 import {
-  ShieldCheck,
-  Lock,
-  Eye,
-  UserCheck,
-  Bell,
   Award,
+  Bell,
+  Eye,
   LayoutDashboard,
+  Lock,
+  ShieldCheck,
   TrendingUp,
+  UserCheck,
 } from "lucide-react";
 import SectionImage from "./ui/SectionImage";
 
 const safetyFeatures = [
   {
     icon: ShieldCheck,
-    title: "COPPA Compliant",
-    desc: "Fully compliant with federal child online privacy protection laws.",
+    title: "Parent-Visible Progress",
+    desc: "Parents can follow enrolled programs, lessons, and progress updates in one place.",
     color: "text-green",
     bg: "bg-green-light",
   },
   {
     icon: Lock,
-    title: "End-to-End Encrypted",
-    desc: "All sessions and data are secured with bank-grade encryption.",
+    title: "Age-Appropriate Paths",
+    desc: "Programs are designed for younger learners with guidance matched to each grade band.",
     color: "text-primary",
     bg: "bg-primary-100",
   },
   {
     icon: Eye,
-    title: "Monitored Classrooms",
-    desc: "Every live session is actively moderated by trained staff.",
+    title: "Guided Classes",
+    desc: "Live sessions are structured with adult guidance and activities built for K-8 students.",
     color: "text-sky",
     bg: "bg-sky-100",
   },
   {
     icon: UserCheck,
-    title: "Verified Instructors",
-    desc: "All educators are background-checked and credentialed.",
+    title: "Clear Communication",
+    desc: "Families receive class updates, messages, and a clear view of what comes next.",
     color: "text-orange",
     bg: "bg-orange-100",
   },
   {
     icon: Bell,
-    title: "Parent Notifications",
-    desc: "Real-time alerts for session attendance, progress milestones and activity.",
+    title: "Organized Enrollment",
+    desc: "Parents can manage children, program enrollment, and upcoming sessions from one dashboard.",
     color: "text-pink",
     bg: "bg-pink-100",
   },
   {
     icon: Award,
-    title: "No Ads. Ever.",
-    desc: "Zero advertising or data monetization. Your children's data stays private.",
+    title: "Structured Activities",
+    desc: "Classes, practice, and progress tools are designed to make the experience easier to follow.",
     color: "text-yellow-dark",
     bg: "bg-amber-50",
   },
 ];
 
 const dashboardFeatures = [
-  "Live class schedule tracking across all children",
-  "Progress reports and certificate archive",
-  "Secure one-click payments via Stripe",
-  "Attendance history and session recordings",
-  "Personalized learning insights per child",
+  "View enrolled classes and upcoming sessions",
+  "Track lessons, quizzes, assignments, and certificates",
+  "Manage children and program enrollment",
+  "Receive class updates and messages",
+  "See progress across multiple programs",
 ];
 
 export default function SafetySection() {
@@ -90,16 +90,16 @@ export default function SafetySection() {
             <div className="inline-flex items-center gap-2 pill px-3 sm:px-4 py-1.5 sm:py-2 bg-white/15 border-white/25 text-white mb-3 sm:mb-4 self-start">
               <ShieldCheck className="w-4 h-4" />
               <span className="text-xs font-bold uppercase tracking-wider">
-                Designed for Joy. Built for Safety.
+                Built for K-8 Families
               </span>
             </div>
             <h2 className="font-display font-extrabold text-2xl sm:text-4xl lg:text-5xl text-white mb-2 sm:mb-3">
-              Safety Is Not{" "}
-              <span className="text-green-light">Optional</span>
+              Built for{" "}
+              <span className="text-green-light">K-8 families.</span>
             </h2>
             <p className="text-on-dark-muted text-sm sm:text-lg leading-relaxed">
-              Every feature is built with your child&apos;s privacy, security, and
-              wellbeing at the center.
+              Parents need enrichment that is organized, age-appropriate, and
+              carefully managed.
             </p>
           </div>
         </motion.div>
@@ -147,13 +147,13 @@ export default function SafetySection() {
               </span>
             </div>
             <h2 className="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-navy">
-              Everything in{" "}
-              <span className="text-primary">One Dashboard</span>
+              See what your child is{" "}
+              <span className="text-primary">working on.</span>
             </h2>
             <p className="text-body leading-relaxed">
-              Monitor progress, manage schedules, and handle tuition for all
-              your children with our intuitive parent interface — built for busy
-              families.
+              The parent dashboard helps families stay organized. Parents can view
+              enrolled programs, upcoming classes, assignments, quiz activity,
+              progress updates, certificates, and messages in one place.
             </p>
             <ul className="space-y-3">
               {dashboardFeatures.map((item) => (
@@ -169,7 +169,7 @@ export default function SafetySection() {
             </ul>
             <button className="btn self-stretch sm:self-start inline-flex items-center justify-center gap-2 px-6 py-3 font-bold bg-primary text-white border-primary-dark w-full sm:w-auto">
               <TrendingUp className="w-4 h-4" />
-              See the Dashboard
+              Book a Trial Class
             </button>
           </motion.div>
 
@@ -201,7 +201,7 @@ export default function SafetySection() {
               </div>
 
               <div className="space-y-2.5">
-                {["Emma — Python Explorers", "Liam — Chess Level 2"].map((child, i) => (
+                {["Alex — Chess Strategy Lab", "Maya — Coding Foundations"].map((child, i) => (
                   <div key={child} className="card-sm bg-surface border-primary-100 p-3">
                     <div className="flex justify-between items-center mb-1.5">
                       <span className="text-xs font-bold text-navy">{child}</span>
@@ -224,7 +224,7 @@ export default function SafetySection() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-navy">Next Class: Today 4:00 PM</p>
-                    <p className="text-[10px] text-subtle">Python Explorers — Emma</p>
+                    <p className="text-[10px] text-subtle">Chess Strategy Lab — Alex</p>
                   </div>
                 </div>
               </div>

@@ -12,12 +12,12 @@ export default function AnnouncementBar() {
   return (
     <div className="relative bg-primary-50 border-b border-primary-100 text-center px-4 sm:px-6 py-2 flex items-center justify-center pr-10">
       <p className="text-xs sm:text-sm font-medium text-body leading-snug">
-        Summer camps are open —{" "}
+        Early cohort enrollment is open —{" "}
         <Link
           href="/courses"
           className="font-bold text-primary hover:text-primary-dark transition-colors"
         >
-          browse classes
+          Book a Trial Class
         </Link>
       </p>
       <button

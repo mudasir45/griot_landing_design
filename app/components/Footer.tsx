@@ -1,26 +1,27 @@
+import { Globe, Mail, MessageCircle } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import { GraduationCap, Globe, MessageCircle, Mail } from "lucide-react";
 
 const footerLinks = {
-  "Learning Path": [
-    { label: "Pricing & Plans", href: "#" },
-    { label: "Course Catalog", href: "/courses" },
-    { label: "Certification Tracking", href: "#" },
-    { label: "Scholar Database", href: "#" },
-    { label: "Library Access", href: "#" },
+  Programs: [
+    { label: "View Programs", href: "/courses" },
+    { label: "Chess Strategy Lab", href: "/courses" },
+    { label: "Coding Foundations", href: "/courses" },
+    { label: "Robotics Lab", href: "/courses" },
+    { label: "Book a Trial Class", href: "/courses" },
   ],
-  "The Academy": [
-    { label: "About Our Ethos", href: "/about" },
+  Academy: [
+    { label: "About Griot Academy", href: "/about" },
     { label: "Contact Us", href: "/contact" },
-    { label: "Partner Program", href: "/schools" },
-    { label: "Research Journal", href: "#" },
-    { label: "Careers", href: "#" },
+    { label: "School Programs", href: "/schools" },
+    { label: "Join Founding Families", href: "/courses" },
+    { label: "Get Class Updates", href: "/contact" },
   ],
-  "Legal & Access": [
+  "Legal & Support": [
     { label: "Privacy Policy", href: "#" },
     { label: "Terms of Service", href: "#" },
     { label: "Accessibility Statement", href: "#" },
-    { label: "Security Audit", href: "#" },
+    { label: "Request School Demo", href: "/schools" },
   ],
 };
 
@@ -33,16 +34,21 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 md:col-span-1 flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2.5 group" aria-label="Griot Academy">
-              <div className="w-9 h-9 bg-primary rounded-2xl flex items-center justify-center">
-                <GraduationCap className="w-5 h-5 text-white" />
-              </div>
+              <Image
+                src="/logo.png"
+                alt=""
+                width={36}
+                height={36}
+                className="w-9 h-9 rounded-2xl object-contain"
+                unoptimized
+              />
               <span className="font-display font-bold text-lg text-white">
                 Griot Academy
               </span>
             </Link>
             <p className="text-sm text-on-dark-muted leading-relaxed max-w-xs">
-              A premium digital learning environment where curiosity meets
-              security. For kids ages 4–18.
+              Structured K-8 enrichment in chess, coding, robotics, math, and AI
+              literacy. Trial-first enrollment for families.
             </p>
 
             {/* Social Links */}

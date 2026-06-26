@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -9,6 +8,7 @@ import {
   Quote,
   Target,
 } from "lucide-react";
+import Link from "next/link";
 import {
   approachPillars,
   coreValues,
@@ -41,17 +41,17 @@ export default function AboutPageContent() {
               <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-50 border-primary-200 text-primary mb-4">
                 <Heart className="w-4 h-4" />
                 <span className="text-xs font-bold uppercase tracking-wider">
-                  About Our Ethos
+                  About Griot Academy
                 </span>
               </div>
               <h1 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
-                Where Curiosity Meets{" "}
-                <span className="text-primary">Purpose</span>
+                Structured enrichment built around{" "}
+                <span className="text-primary">your child&apos;s growth.</span>
               </h1>
               <p className="text-body text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Griot Academy is a premium digital learning environment built
-                for kids ages 4–18 — where expert instruction, child safety,
-                and genuine joy come together in every session.
+                Griot Academy offers K-8 enrichment in chess, coding, robotics,
+                math, and AI literacy — with live classes, guided practice, and
+                parent-visible progress.
               </p>
             </motion.div>
 
@@ -76,7 +76,7 @@ export default function AboutPageContent() {
                 </div>
                 <div>
                   <p className="font-bold text-sm text-navy leading-none">Since 2019</p>
-                  <p className="text-xs text-body mt-0.5">Empowering young minds</p>
+                  <p className="text-xs text-body mt-0.5">Structured K-8 enrichment</p>
                 </div>
               </div>
             </motion.div>
@@ -137,28 +137,25 @@ export default function AboutPageContent() {
                 </span>
               </div>
               <h2 className="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-navy">
-                Born from a Simple{" "}
-                <span className="text-primary">Belief</span>
+                Built around a{" "}
+                <span className="text-primary">clear idea.</span>
               </h2>
               <p className="text-body leading-relaxed">
-                Griot Academy started when a group of educators and parents asked
-                a question: why does online learning for kids so often feel
-                impersonal, unsafe, or boring? We believed it could be different
-                — live, interactive, and designed with the same care you&apos;d
-                expect from the best in-person classroom.
+                Griot Academy started when educators and parents asked a simple
+                question: how can families choose enrichment that is useful,
+                age-appropriate, organized, and easy to follow?
               </p>
               <p className="text-body leading-relaxed">
-                Named after the West African tradition of the griot — a storyteller
-                who preserves knowledge and passes wisdom to the next generation
-                — we set out to create a platform where every child&apos;s
-                curiosity is honored, every session is safe, and every instructor
-                is someone you&apos;d trust with your own kid.
+                Named after the West African tradition of the griot — a
+                storyteller who preserves knowledge and passes wisdom to the next
+                generation — Griot Academy brings chess, coding, robotics, math,
+                and AI literacy into one structured learning path.
               </p>
               <p className="text-body leading-relaxed">
-                Today, we serve over 10,000 students through live online classes,
-                in-person enrichment hubs, school programs, and district
-                partnerships — but our mission hasn&apos;t changed: joyful
-                learning, made safe.
+                Today, families can start with a trial class, join an early
+                cohort, or compare programs first. The goal stays the same:
+                help children practice useful skills in a guided setting parents
+                can follow.
               </p>
             </motion.div>
           </div>
@@ -267,10 +264,10 @@ export default function AboutPageContent() {
                 <span className="text-primary">Deliver</span>
               </h2>
               <p className="text-body leading-relaxed">
-                Griot Academy isn&apos;t a content library — it&apos;s a living
-                learning ecosystem. Every format we offer shares the same
-                commitment to live instruction, child safety, and measurable
-                outcomes.
+                Griot Academy is built around live classes, guided practice, and
+                parent visibility. Each program helps students practice a
+                specific kind of thinking — from chess strategy to responsible
+                AI use.
               </p>
 
               <div className="space-y-4">
@@ -353,8 +350,8 @@ export default function AboutPageContent() {
               <span className="text-primary">the Way</span>
             </h2>
             <p className="text-body text-base sm:text-lg leading-relaxed">
-              From a single coding class to a platform trusted by thousands of
-              families and dozens of schools.
+              From early cohorts to school partnerships, Griot Academy is
+              building structured enrichment families can trust.
             </p>
           </motion.div>
 
@@ -413,27 +410,27 @@ export default function AboutPageContent() {
               <GraduationCap className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
             </div>
             <h2 className="font-display font-extrabold section-heading text-navy">
-              Ready to Join the{" "}
-              <span className="text-primary">Griot Family?</span>
+              Find the right program{" "}
+              <span className="text-primary">for your child.</span>
             </h2>
             <p className="text-body text-base sm:text-lg leading-relaxed max-w-xl">
-              Explore our course catalog or start a free trial — your
-              child&apos;s learning journey begins with a single click.
+              Try a class, join an early cohort, or compare programs across
+              chess, coding, robotics, math, and AI literacy.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
               <Link
                 href="/courses"
                 className="btn inline-flex items-center justify-center gap-2 px-8 py-4 font-bold bg-primary text-white border-primary-dark w-full sm:w-auto"
               >
-                Browse Courses
+                Book a Trial Class
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <button className="btn inline-flex items-center justify-center gap-2 px-8 py-4 font-bold bg-white text-navy border-border-strong w-full sm:w-auto">
-                Get Started Free
+                Join Founding Families
               </button>
             </div>
             <p className="text-xs sm:text-sm text-subtle">
-              Free trial · No credit card required · Cancel anytime
+              Try a class, join an early cohort, or compare programs first.
             </p>
           </motion.div>
         </div>

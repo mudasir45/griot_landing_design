@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, ArrowRight, GraduationCap } from "lucide-react";
+import { ArrowRight, GraduationCap, Sparkles } from "lucide-react";
 import SectionImage from "./ui/SectionImage";
 
 export default function FinalCTA() {
@@ -69,36 +69,34 @@ export default function FinalCTA() {
               <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-yellow/20 border-yellow/50 text-yellow-dark mb-4 sm:mb-5">
                 <Sparkles className="w-4 h-4" />
                 <span className="text-xs font-bold uppercase tracking-wider">
-                  Ready to Step into the Future?
+                  Find the right starting point.
                 </span>
               </div>
               <h2 className="font-display font-extrabold section-heading text-navy leading-tight">
-                Start Your{" "}
-                <span className="text-primary">Learning Journey</span>
-                <br className="hidden sm:block" />
-                <span className="sm:hidden"> </span>
-                Today — It&apos;s Free
+                Find the right starting point{" "}
+                <span className="text-primary">for your child.</span>
               </h2>
             </div>
 
             <p className="text-body text-base sm:text-lg lg:text-xl max-w-xl leading-relaxed px-1">
-              Join 10,000+ families who&apos;ve already discovered the joy of
-              learning with Griot Academy. No credit card needed to try your
-              first class.
+              Whether your child is ready for chess strategy, coding projects,
+              robotics challenges, math reasoning, AI literacy, or general STEM
+              enrichment, Griot Academy can help your family choose a practical
+              next step.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto max-w-md sm:max-w-none">
               <button className="btn inline-flex items-center justify-center gap-2 px-8 sm:px-10 py-4 sm:py-5 text-sm sm:text-base font-bold bg-primary text-white border-primary-dark w-full sm:w-auto">
-                Get Started Free
+                Book a Trial Class
                 <ArrowRight className="w-5 h-5" />
               </button>
               <button className="btn inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 sm:py-5 text-sm sm:text-base font-bold bg-yellow text-navy border-yellow-dark w-full sm:w-auto">
-                Browse All Courses
+                Join Founding Families
               </button>
             </div>
 
             <p className="text-xs sm:text-sm text-subtle">
-              Free trial · No credit card required · Cancel anytime
+              Try a class, join an early cohort, or compare programs first.
             </p>
           </motion.div>
 

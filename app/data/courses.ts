@@ -70,6 +70,7 @@ export interface Course {
   category: CourseCategory;
   icon: CourseIconName;
   image: string;
+  banner?: string;
   imageAlt: string;
   bg: string;
   border: string;
@@ -96,8 +97,8 @@ export const courses: Course[] = [
     tag: "Chess",
     category: "Chess",
     icon: "Brain",
-    image: "/images/The_Scholar.d92aa1ba7abc5bbd377244bd1ee7151c.webp",
-    imageAlt: "Focused student mastering chess strategy",
+    image: "/images/courses/chess-fundamentals.png",
+    imageAlt: "Young student with books developing strategic thinking skills",
     bg: "bg-amber-50",
     border: "border-amber-200",
     iconBg: "bg-amber-400",
@@ -150,8 +151,8 @@ export const courses: Course[] = [
     tag: "Coding",
     category: "Coding",
     icon: "Code2",
-    image: "/images/The_Coder.4da186f687ce6f7459ecfac9704755dc.webp",
-    imageAlt: "Young coder building Python projects on a laptop",
+    image: "/images/courses/python-explorers.png",
+    imageAlt: "Young coder learning Python on a laptop",
     bg: "bg-primary-50",
     border: "border-primary-200",
     iconBg: "bg-primary",
@@ -204,8 +205,8 @@ export const courses: Course[] = [
     tag: "Robotics",
     category: "STEM",
     icon: "Cpu",
-    image: "/images/The_Explorer.659eb58be482e98a1c1bf3bf26cd24ef.webp",
-    imageAlt: "Curious explorer discovering robotics and engineering",
+    image: "/images/courses/robotics-makers-lab.png",
+    imageAlt: "Student building with colorful blocks during a robotics lesson",
     bg: "bg-sky-50",
     border: "border-sky-200",
     iconBg: "bg-sky-500",
@@ -258,8 +259,8 @@ export const courses: Course[] = [
     tag: "Arts",
     category: "Arts",
     icon: "Palette",
-    image: "/images/The_Artist.1085a10836fc3a9c2389328070563306.webp",
-    imageAlt: "Young artist painting a vibrant landscape",
+    image: "/images/courses/art-digital-design.png",
+    imageAlt: "Creative student with notebook and bright ideas for art class",
     bg: "bg-pink-50",
     border: "border-pink-200",
     iconBg: "bg-pink-500",
@@ -312,8 +313,8 @@ export const courses: Course[] = [
     tag: "Science",
     category: "STEM",
     icon: "FlaskConical",
-    image: "/images/facility-bg.jpg",
-    imageAlt: "Students conducting hands-on science experiments with an instructor",
+    image: "/images/courses/science-lab.png",
+    imageAlt: "Student ready for hands-on science and STEM exploration",
     bg: "bg-green-50",
     border: "border-green-200",
     iconBg: "bg-green",
@@ -366,8 +367,8 @@ export const courses: Course[] = [
     tag: "Writing",
     category: "Writing",
     icon: "PenLine",
-    image: "/images/about01.jpg",
-    imageAlt: "Instructor reading a story with an engaged young learner",
+    image: "/images/courses/creative-writing.png",
+    imageAlt: "Student in a live online writing class with notebook and headset",
     bg: "bg-orange-50",
     border: "border-orange-200",
     iconBg: "bg-orange",

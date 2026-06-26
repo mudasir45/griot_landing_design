@@ -13,12 +13,13 @@ import {
   Palette,
   PenLine,
   Search,
+  type LucideIcon,
 } from "lucide-react";
-import type { CategoryFilter } from "../../data/courses";
-import { categoryFilters, courses } from "../../data/courses";
+import type { Course } from "../../data/courses";
+import type { CourseCategoryOutput } from "../../lib/api";
 import CourseCard from "../CourseCard";
 
-const categoryIcons: Record<CategoryFilter, typeof Globe> = {
+const categoryIcons: Record<string, LucideIcon> = {
   All: Globe,
   Coding: Code2,
   STEM: FlaskConical,
@@ -30,8 +31,22 @@ const categoryIcons: Record<CategoryFilter, typeof Globe> = {
   Writing: PenLine,
 };
 
-export default function CourseCatalog() {
-  const [activeCategory, setActiveCategory] = useState<CategoryFilter>("All");
+function getCategoryIcon(name: string): LucideIcon {
+  return categoryIcons[name] ?? Globe;
+}
+
+interface CourseCatalogProps {
+  courses: Course[];
+  categories: CourseCategoryOutput[];
+}
+
+export default function CourseCatalog({ courses, categories }: CourseCatalogProps) {
+  const categoryFilters = useMemo(
+    () => ["All", ...categories.map((category) => category.name)],
+    [categories]
+  );
+
+  const [activeCategory, setActiveCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredCourses = useMemo(() => {
@@ -39,7 +54,9 @@ export default function CourseCatalog() {
 
     return courses.filter((course) => {
       const matchesCategory =
-        activeCategory === "All" || course.category === activeCategory;
+        activeCategory === "All" ||
+        course.category === activeCategory ||
+        course.tag === activeCategory;
       const matchesSearch =
         !query ||
         course.title.toLowerCase().includes(query) ||
@@ -48,7 +65,7 @@ export default function CourseCatalog() {
 
       return matchesCategory && matchesSearch;
     });
-  }, [activeCategory, searchQuery]);
+  }, [activeCategory, courses, searchQuery]);
 
   return (
     <>
@@ -76,7 +93,7 @@ export default function CourseCatalog() {
         className="flex gap-2 mb-8 sm:mb-10 overflow-x-auto pb-1 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:justify-center scrollbar-hide"
       >
         {categoryFilters.map((category) => {
-          const Icon = categoryIcons[category];
+          const Icon = getCategoryIcon(category);
           const isActive = activeCategory === category;
 
           return (

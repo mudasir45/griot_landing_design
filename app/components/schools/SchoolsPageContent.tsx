@@ -1,8 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowRight,
   Building2,
@@ -12,6 +10,8 @@ import {
   Quote,
   Star,
 } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 import {
   implementationSteps,
   institutionBenefits,
@@ -45,9 +45,8 @@ function FAQItem({
           {q}
         </span>
         <ChevronDown
-          className={`w-5 h-5 text-primary flex-shrink-0 transition-transform duration-200 ${
-            isOpen ? "rotate-180" : ""
-          }`}
+          className={`w-5 h-5 text-primary flex-shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""
+            }`}
         />
       </button>
       <AnimatePresence initial={false}>
@@ -112,13 +111,14 @@ export default function SchoolsPageContent() {
               </div>
 
               <h1 className="font-display font-extrabold section-heading text-white leading-tight">
-                Bring Griot to{" "}
-                <span className="text-yellow">Your District</span>
+                Bring Griot Academy to{" "}
+                <span className="text-yellow">your school or group.</span>
               </h1>
               <p className="text-on-dark-muted text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Scale high-quality enrichment across all your campuses with our
-                plug-and-play institutional framework. Serving thousands of
-                students has never been simpler.
+                Schools and organizations can explore chess, coding, robotics,
+                math, AI literacy, and STEM programming for groups of students.
+                Partnership options may include live instruction, cohort
+                scheduling, progress visibility, and program support.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center lg:justify-start">
@@ -126,7 +126,7 @@ export default function SchoolsPageContent() {
                   href="/contact"
                   className="btn inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 font-bold bg-yellow text-navy border-yellow-dark w-full sm:w-auto"
                 >
-                  Inquire About Licensing
+                  Request School Demo
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <button className="btn inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-4 font-bold bg-white/15 text-on-dark border-white/30 hover:bg-white/25 w-full sm:w-auto">
@@ -183,12 +183,12 @@ export default function SchoolsPageContent() {
             className="text-center max-w-2xl mx-auto mb-10 sm:mb-14"
           >
             <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
-              Built for{" "}
-              <span className="text-primary">Institutions</span>
+              Programs for{" "}
+              <span className="text-primary">schools and groups.</span>
             </h2>
             <p className="text-body text-base sm:text-lg leading-relaxed">
-              Whether you&apos;re a single school or an entire district, Griot
-              Academy adapts to your scale, standards, and schedule.
+              Griot can support enrichment conversations for after-school
+              programs, homeschool groups, and community learning settings.
             </p>
           </motion.div>
 
@@ -263,12 +263,12 @@ export default function SchoolsPageContent() {
               </span>
             </div>
             <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
-              From Inquiry to{" "}
-              <span className="text-primary">Impact</span>
+              How school{" "}
+              <span className="text-primary">programs work.</span>
             </h2>
             <p className="text-body text-base sm:text-lg leading-relaxed">
-              Our partnerships team guides you through every step — most schools
-              are fully live within 2–3 weeks.
+              Griot can discuss grade bands, scheduling, live instruction, and
+              program fit before launching a pilot or cohort.
             </p>
           </motion.div>
 
@@ -314,8 +314,8 @@ export default function SchoolsPageContent() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-navy mb-5">
-                Why Institutions{" "}
-                <span className="text-primary">Choose Griot</span>
+                Why schools and groups{" "}
+                <span className="text-primary">choose Griot</span>
               </h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 {institutionBenefits.map((benefit, i) => {
@@ -350,17 +350,17 @@ export default function SchoolsPageContent() {
               className="card bg-primary-50 border-primary p-6 sm:p-8 sticky top-24"
             >
               <p className="text-xs font-bold uppercase tracking-wider text-primary mb-2">
-                Institution Plan
+                School Programs
               </p>
               <p className="font-display font-extrabold text-4xl text-navy mb-1">
                 Custom
               </p>
               <p className="text-sm font-semibold text-body mb-5">
-                District & school pricing
+                School and group options
               </p>
               <p className="text-sm text-body leading-relaxed mb-6">
-                Scalable licensing for schools, districts, and after-school
-                programs — tailored to your student volume and program scope.
+                Griot can discuss chess, coding, robotics, math, AI literacy, and
+                STEM programming based on your student group and schedule.
               </p>
               <ul className="space-y-2.5 mb-6">
                 {institutionFeatures.map((feature) => (
@@ -377,7 +377,7 @@ export default function SchoolsPageContent() {
                 href="/contact"
                 className="btn w-full py-3.5 font-bold bg-primary text-white border-primary-dark inline-flex items-center justify-center gap-2"
               >
-                Contact Sales
+                Request School Demo
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
@@ -397,11 +397,11 @@ export default function SchoolsPageContent() {
           >
             <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
               Trusted by{" "}
-              <span className="text-primary">Educators</span>
+              <span className="text-primary">school partners.</span>
             </h2>
             <p className="text-body text-base sm:text-lg leading-relaxed">
-              Hear from school leaders and district administrators who partner
-              with Griot Academy.
+              School leaders and organizers share how structured enrichment fits
+              their after-school and group programs.
             </p>
           </motion.div>
 
@@ -469,8 +469,8 @@ export default function SchoolsPageContent() {
             className="text-center mb-8 sm:mb-10"
           >
             <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-navy mb-3">
-              Common Questions from{" "}
-              <span className="text-primary">School Leaders</span>
+              Questions from{" "}
+              <span className="text-primary">school leaders</span>
             </h2>
           </motion.div>
 
@@ -503,19 +503,19 @@ export default function SchoolsPageContent() {
             className="flex flex-col items-center gap-5 sm:gap-6"
           >
             <h2 className="font-display font-extrabold section-heading text-white">
-              Ready to Bring Griot to{" "}
-              <span className="text-yellow">Your Campus?</span>
+              Ready to bring Griot to{" "}
+              <span className="text-yellow">your campus?</span>
             </h2>
             <p className="text-on-dark-muted text-base sm:text-lg leading-relaxed max-w-xl">
-              Schedule a demo with our partnerships team and see how Griot
-              Academy can transform enrichment at your school or district.
+              Schedule a school demo and see how Griot Academy can support
+              enrichment for your students or group.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
               <Link
                 href="/contact"
                 className="btn inline-flex items-center justify-center gap-2 px-8 py-4 font-bold bg-yellow text-navy border-yellow-dark w-full sm:w-auto"
               >
-                Schedule a Demo
+                Request School Demo
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <button className="btn inline-flex items-center justify-center gap-2 px-8 py-4 font-bold bg-white/15 text-on-dark border-white/30 w-full sm:w-auto">

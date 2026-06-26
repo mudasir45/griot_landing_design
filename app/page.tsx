@@ -1,6 +1,5 @@
 import AnnouncementBar from "./components/AnnouncementBar";
 import CoursesSection from "./components/CoursesSection";
-import CoursesSectionOverlap from "./components/CoursesSectionOverlap";
 import FAQSection from "./components/FAQSection";
 import FeaturesSection from "./components/FeaturesSection";
 import FinalCTA from "./components/FinalCTA";
@@ -11,16 +10,19 @@ import InstructorsSection from "./components/InstructorsSection";
 import Navbar from "./components/Navbar";
 import SafetySection from "./components/SafetySection";
 import TestimonialsSection from "./components/TestimonialsSection";
+import { getPublicCourses } from "./lib/courses-data";
 
-export default function Home() {
+export default async function Home() {
+  const courses = await getPublicCourses();
+
   return (
     <>
       <AnnouncementBar />
       <Navbar />
       <main>
         <Hero />
-        <CoursesSection />
-        <CoursesSectionOverlap />
+        <CoursesSection courses={courses} />
+        {/* <CoursesSectionOverlap /> */}
         <FeaturesSection />
         <HowItWorks />
         <SafetySection />

@@ -1,49 +1,49 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, Star, BookOpen } from "lucide-react";
+import { BookOpen, Star, Users } from "lucide-react";
 import SectionImage from "./ui/SectionImage";
 
 const instructors = [
   {
-    name: "Dr. Sarah Chen",
-    title: "Biochemistry & STEM",
-    initials: "SC",
-    bg: "bg-primary",
-    courses: 12,
-    rating: 4.9,
-    students: 1240,
-    tags: ["Science", "Biology", "Chemistry"],
-  },
-  {
-    name: "Marcus Thorne",
-    title: "Strategic Logic & Chess",
-    initials: "MT",
+    name: "Marcus Webb",
+    title: "Chess Strategy & Critical Thinking",
+    initials: "MW",
     bg: "bg-amber-400",
     courses: 8,
     rating: 5.0,
     students: 980,
-    tags: ["Chess", "Critical Thinking", "Math"],
+    tags: ["Chess", "Strategy", "K-8"],
   },
   {
-    name: "Elena Vance",
-    title: "Digital Media & Arts",
-    initials: "EV",
-    bg: "bg-pink-500",
-    courses: 15,
-    rating: 4.8,
-    students: 1560,
-    tags: ["Art", "Design", "Animation"],
+    name: "Priya Nair",
+    title: "Coding Foundations",
+    initials: "PN",
+    bg: "bg-primary",
+    courses: 12,
+    rating: 4.9,
+    students: 1240,
+    tags: ["Coding", "Logic", "Projects"],
   },
   {
     name: "David Ray",
-    title: "Applied Robotics",
+    title: "Robotics & Engineering",
     initials: "DR",
     bg: "bg-sky-500",
     courses: 6,
     rating: 4.9,
     students: 720,
-    tags: ["Robotics", "Engineering", "Coding"],
+    tags: ["Robotics", "Building", "STEM"],
+  },
+  {
+    name: "Dr. Leah Torres",
+    title: "Math Reasoning & AI Literacy",
+    initials: "LT",
+    bg: "bg-pink-500",
+    courses: 10,
+    rating: 4.8,
+    students: 860,
+    tags: ["Math", "AI Literacy", "Reasoning"],
   },
 ];
 
@@ -62,16 +62,17 @@ export default function InstructorsSection() {
           <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-100 border-primary-200 text-primary mb-4">
             <Users className="w-4 h-4" />
             <span className="text-xs font-bold uppercase tracking-wider">
-              The Human Core
+              Expert Instructors
             </span>
           </div>
           <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
-            World-Class{" "}
-            <span className="text-primary">Educators</span>
+            Guided by{" "}
+            <span className="text-primary">Experienced Instructors</span>
           </h2>
           <p className="text-body text-base sm:text-lg leading-relaxed px-1">
-            Industry leaders and credentialed educators who make learning feel
-            like an adventure — not a chore.
+            Griot instructors lead small, guided classes in chess, coding,
+            robotics, math, and AI literacy — with clear structure and room for
+            student questions.
           </p>
         </motion.div>
 
@@ -175,9 +176,9 @@ export default function InstructorsSection() {
           className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-8 sm:mt-12"
         >
           {[
-            { value: "10,000+", label: "Students Served", icon: Users, color: "text-primary", bg: "bg-primary-100" },
-            { value: "50+", label: "Partner Schools", icon: BookOpen, color: "text-orange", bg: "bg-orange-100" },
-            { value: "98%", label: "Satisfaction Rate", icon: Star, color: "text-yellow-dark", bg: "bg-amber-100" },
+            { value: "5", label: "Program Areas", icon: Users, color: "text-primary", bg: "bg-primary-100" },
+            { value: "K–8", label: "Grade Bands", icon: BookOpen, color: "text-orange", bg: "bg-orange-100" },
+            { value: "Small", label: "Group Format", icon: Star, color: "text-yellow-dark", bg: "bg-amber-100" },
           ].map((stat) => {
             const Icon = stat.icon;
             return (

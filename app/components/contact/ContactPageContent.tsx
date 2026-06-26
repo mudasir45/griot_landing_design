@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   CheckCircle2,
@@ -9,6 +8,7 @@ import {
   MessageSquare,
   Send,
 } from "lucide-react";
+import { useState } from "react";
 import {
   contactMethods,
   inquiryOptions,
@@ -75,9 +75,9 @@ export default function ContactPageContent() {
                 <span className="text-primary">Help</span>
               </h1>
               <p className="text-body text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Whether you&apos;re a parent exploring courses, a school
-                evaluating programs, or a partner with a big idea — our team
-                is ready to connect.
+                Whether you want to book a trial class, join an early cohort,
+                request a school demo, or ask about programs — our team is ready
+                to help.
               </p>
             </motion.div>
 
@@ -101,7 +101,7 @@ export default function ContactPageContent() {
                   <Clock className="w-5 h-5 text-green" />
                 </div>
                 <div>
-                  <p className="font-bold text-sm text-navy leading-none">&lt; 4 hr response</p>
+                  <p className="font-bold text-sm text-navy leading-none">We reply quickly</p>
                   <p className="text-xs text-body mt-0.5">On business days</p>
                 </div>
               </div>
@@ -163,40 +163,50 @@ export default function ContactPageContent() {
                   Send Us a Message
                 </h2>
                 <p className="text-sm text-body mb-6">
-                  Choose your inquiry type and fill out the form below.
+                  Tell us your child&apos;s grade, program interest, or school
+                  partnership needs.
                 </p>
 
                 {/* Inquiry Type Selector */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                  {inquiryOptions.map((option) => {
-                    const Icon = option.icon;
-                    const isActive = inquiryType === option.id;
+                <div className="mb-6">
+                  <label className="block text-sm font-bold text-navy mb-3">
+                    What can we help you with?
+                  </label>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {inquiryOptions.map((option) => {
+                      const Icon = option.icon;
+                      const isActive = inquiryType === option.id;
 
-                    return (
-                      <button
-                        key={option.id}
-                        type="button"
-                        onClick={() => setInquiryType(option.id)}
-                        className={`card-sm p-4 text-left transition-all duration-200 cursor-pointer ${
-                          isActive
-                            ? `${option.bg} ${option.border} ring-2 ring-primary/20`
-                            : "bg-white border-border hover:border-primary-200"
-                        }`}
-                      >
-                        <div className="flex items-start gap-3">
-                          <div
-                            className={`w-9 h-9 rounded-xl ${isActive ? "bg-white" : option.bg} flex items-center justify-center flex-shrink-0`}
-                          >
-                            <Icon className={`w-4 h-4 ${option.color}`} />
+                      return (
+                        <button
+                          key={option.id}
+                          type="button"
+                          onClick={() => setInquiryType(option.id)}
+                          aria-pressed={isActive}
+                          className={`card-sm p-4 sm:p-5 text-left transition-all duration-200 cursor-pointer ${isActive
+                              ? `${option.bg} ${option.border} ring-2 ring-primary/20`
+                              : "bg-white border-border hover:border-primary-200"
+                            }`}
+                        >
+                          <div className="flex items-start gap-3">
+                            <div
+                              className={`w-11 h-11 rounded-2xl ${isActive ? "bg-white" : option.bg} flex items-center justify-center flex-shrink-0`}
+                            >
+                              <Icon className={`w-5 h-5 ${option.color}`} />
+                            </div>
+                            <div>
+                              <p className="font-display font-bold text-base sm:text-lg text-navy leading-tight">
+                                {option.label}
+                              </p>
+                              <p className="text-sm text-body mt-1 leading-snug">
+                                {option.desc}
+                              </p>
+                            </div>
                           </div>
-                          <div>
-                            <p className="font-bold text-sm text-navy">{option.label}</p>
-                            <p className="text-xs text-body mt-0.5">{option.desc}</p>
-                          </div>
-                        </div>
-                      </button>
-                    );
-                  })}
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
 
                 {submitted ? (
@@ -212,8 +222,8 @@ export default function ContactPageContent() {
                       Message Sent!
                     </h3>
                     <p className="text-sm text-body max-w-sm mx-auto">
-                      Thanks for reaching out. Our team will get back to you
-                      within one business day.
+                      Thanks for reaching out. Our team will follow up with the
+                      next step for your trial class, cohort, or school inquiry.
                     </p>
                     <button
                       type="button"
@@ -278,7 +288,7 @@ export default function ContactPageContent() {
                         rows={5}
                         value={form.message}
                         onChange={(e) => updateField("message", e.target.value)}
-                        placeholder="Tell us how we can help..."
+                        placeholder="Share your child's grade, program interest, or question..."
                         className="w-full px-4 py-3 text-sm font-medium text-foreground bg-white border border-border rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-y min-h-[120px]"
                       />
                     </div>

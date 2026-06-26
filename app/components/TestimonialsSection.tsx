@@ -1,25 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Quote, Star, MessageSquare } from "lucide-react";
+import { MessageSquare, Quote, Star } from "lucide-react";
 import SectionImage from "./ui/SectionImage";
 
 const testimonials = [
   {
     quote:
-      "The security protocols gave me peace of mind, but the curriculum quality is what kept my son engaged. He's now building his own robotics projects from scratch!",
+      "Chess Strategy Lab gave my son a clear way to slow down and explain his thinking. The class format felt organized, and I could see what he was working on.",
     name: "Linda Wu",
     role: "Parent",
     location: "New York, NY",
     initials: "LW",
     bg: "bg-primary",
     tagColor: "bg-primary-100 text-primary border-primary-200",
-    tag: "Robotics Parent",
+    tag: "Chess Parent",
     stars: 5,
   },
   {
     quote:
-      "Integrating Griot into our after-school program was effortless. The data tracking helps us justify the investment to our board every single semester.",
+      "Griot made it easy to bring structured coding enrichment into our after-school program. The parent visibility helped us explain the value to families.",
     name: "Dr. James Sterling",
     role: "Principal",
     location: "Heights Academy",
@@ -31,19 +31,19 @@ const testimonials = [
   },
   {
     quote:
-      "My daughter was shy about math until Griot's Science Lab. Now she corrects her teachers! The instructors have a genuine gift for making kids love learning.",
+      "My daughter started in Coding Foundations and actually enjoyed explaining how her project worked. The guided format made the first step feel manageable.",
     name: "Maria Santos",
     role: "Parent",
     location: "Austin, TX",
     initials: "MS",
     bg: "bg-pink-500",
     tagColor: "bg-pink-100 text-pink-700 border-pink-200",
-    tag: "Science Parent",
+    tag: "Coding Parent",
     stars: 5,
   },
   {
     quote:
-      "Our district adopted Griot Academy for five schools in one semester. The onboarding was smooth and student engagement scores have been outstanding.",
+      "We piloted Griot robotics and math programs for a small group. The structure, communication, and progress visibility made the partnership straightforward.",
     name: "Superintendent Kim",
     role: "District Superintendent",
     location: "Oakland Unified",
@@ -70,15 +70,16 @@ export default function TestimonialsSection() {
           <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-yellow/20 border-yellow/50 text-yellow-dark mb-4">
             <MessageSquare className="w-4 h-4" />
             <span className="text-xs font-bold uppercase tracking-wider">
-              Voices of Success
+              What Families Are Saying
             </span>
           </div>
           <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
-            Loved by Kids,{" "}
-            <span className="text-primary">Trusted by Parents</span>
+            Trusted by{" "}
+            <span className="text-primary">K-8 families.</span>
           </h2>
           <p className="text-body text-base sm:text-lg leading-relaxed px-1">
-            Real results from families and schools across America.
+            Families and school partners share how structured enrichment in
+            chess, coding, robotics, math, and AI literacy fits their goals.
           </p>
         </motion.div>
 

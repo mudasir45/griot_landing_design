@@ -17,10 +17,10 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Griot Academy | Joyful Learning Made Safe",
+  title: "Griot Academy | K-8 Enrichment in Chess, Coding, Robotics, Math & AI",
   description:
-    "Premium digital learning environment for kids ages 4–18. 200+ live courses in coding, chess, robotics, arts and more. Parent-approved and COPPA compliant.",
-  keywords: "kids online classes, children education, coding for kids, chess lessons, robotics for children, STEM education",
+    "Structured K-8 enrichment with live classes and guided practice in chess, coding, robotics, math, and AI literacy. Book a trial class or join an early cohort.",
+  keywords: "K-8 enrichment, chess for kids, coding for kids, robotics for children, math reasoning, AI literacy, trial class",
 };
 
 export const viewport = {

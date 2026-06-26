@@ -4,37 +4,47 @@ import AnnouncementBar from "../../components/AnnouncementBar";
 import CourseDetailContent from "../../components/courses/CourseDetailContent";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
-import { getCourseBySlug, getCourseSlugs } from "../../data/courses";
+import { getCourseDetail, getCourseSlugs } from "../../lib/courses-data";
+import { fetchPublicCourseBySlug } from "../../lib/api";
 
 interface CourseDetailPageProps {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return getCourseSlugs().map((slug) => ({ slug }));
+  const slugs = await getCourseSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
   params,
 }: CourseDetailPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const course = getCourseBySlug(slug);
 
-  if (!course) {
-    return { title: "Course Not Found | Griot Academy" };
+  try {
+    const apiCourse = await fetchPublicCourseBySlug(slug);
+    return {
+      title: `${apiCourse.title} | Griot Academy`,
+      description: apiCourse.description ?? apiCourse.title,
+    };
+  } catch {
+    const detail = await getCourseDetail(slug);
+    if (!detail) {
+      return { title: "Course Not Found | Griot Academy" };
+    }
+
+    return {
+      title: `${detail.course.title} | Griot Academy`,
+      description: detail.course.desc,
+    };
   }
-
-  return {
-    title: `${course.title} | Griot Academy`,
-    description: course.desc,
-  };
 }
 
 export default async function CourseDetailPage({ params }: CourseDetailPageProps) {
   const { slug } = await params;
-  const course = getCourseBySlug(slug);
+  const detail = await getCourseDetail(slug);
 
-  if (!course) {
+  if (!detail) {
     notFound();
   }
 
@@ -43,7 +53,12 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
       <AnnouncementBar />
       <Navbar />
       <main>
-        <CourseDetailContent course={course} />
+        <CourseDetailContent
+          course={detail.course}
+          cohorts={detail.cohorts}
+          relatedCourses={detail.relatedCourses}
+          defaultCohort={detail.defaultCohort}
+        />
       </main>
       <Footer />
     </>

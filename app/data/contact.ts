@@ -1,13 +1,12 @@
 import type { LucideIcon } from "lucide-react";
 import {
   Building2,
-  Clock,
   Mail,
   MapPin,
   MessageCircle,
   Phone,
   School,
-  Users,
+  Users
 } from "lucide-react";
 
 export type InquiryType =
@@ -40,7 +39,7 @@ export const inquiryOptions: InquiryOption[] = [
   {
     id: "parent",
     label: "Parent & Family",
-    desc: "Enrollment, courses, and account help",
+    desc: "Trial classes, program fit, and enrollment questions",
     icon: Users,
     color: "text-primary",
     bg: "bg-primary-50",
@@ -48,8 +47,8 @@ export const inquiryOptions: InquiryOption[] = [
   },
   {
     id: "school",
-    label: "Schools & Districts",
-    desc: "Programs, licensing, and integrations",
+    label: "Schools & Groups",
+    desc: "School demos, after-school programs, and group pilots",
     icon: School,
     color: "text-sky",
     bg: "bg-sky-50",
@@ -57,8 +56,8 @@ export const inquiryOptions: InquiryOption[] = [
   },
   {
     id: "partnership",
-    label: "Partnerships",
-    desc: "Collaborations and institutional deals",
+    label: "Founding Families",
+    desc: "Early cohort access and class update requests",
     icon: Building2,
     color: "text-orange",
     bg: "bg-orange-50",
@@ -66,8 +65,8 @@ export const inquiryOptions: InquiryOption[] = [
   },
   {
     id: "support",
-    label: "Technical Support",
-    desc: "Platform issues and troubleshooting",
+    label: "General Questions",
+    desc: "Program questions, scheduling, and account help",
     icon: MessageCircle,
     color: "text-green",
     bg: "bg-green-50",
@@ -112,7 +111,7 @@ export const officeHours = [
 ];
 
 export const responseHighlights = [
-  "Average response time under 4 hours",
-  "Dedicated support for schools & districts",
-  "Live chat available during business hours",
+  "Help with trial class and program questions",
+  "School demo and group program inquiries",
+  "Clear next steps for parents and organizers",
 ];

@@ -49,12 +49,12 @@ export interface SchoolTestimonial {
 export const partnershipOfferings: PartnershipOffering[] = [
   {
     icon: School,
-    title: "School Programs",
-    desc: "Seamlessly integrated curriculum for private and public schools — no extra setup required. Plug Griot into your existing schedules with full teacher training and support.",
+    title: "After-School Programs",
+    desc: "Schools can explore chess, coding, robotics, math, AI literacy, and STEM programming for after-school clubs and enrichment blocks.",
     highlights: [
-      "Plugs into existing schedules",
-      "Aligned with Common Core",
-      "Teacher training & support",
+      "Chess clubs and strategy labs",
+      "Coding and robotics groups",
+      "Progress visibility for organizers",
     ],
     color: "text-sky",
     iconBg: "bg-sky-100",
@@ -63,12 +63,12 @@ export const partnershipOfferings: PartnershipOffering[] = [
   },
   {
     icon: Building2,
-    title: "District Partnerships",
-    desc: "Scalable educational infrastructure designed to support thousands of students across multiple campuses with centralized administration and district-wide analytics.",
+    title: "Group & Community Programs",
+    desc: "Homeschool groups and community organizers can discuss grade bands, scheduling, live instruction, and program fit for student groups.",
     highlights: [
-      "Centralized admin dashboard",
-      "District-wide data analytics",
-      "Custom program branding",
+      "Group scheduling support",
+      "Program pilots and cohorts",
+      "Clear communication with families",
     ],
     color: "text-green",
     iconBg: "bg-green-light",
@@ -80,77 +80,77 @@ export const partnershipOfferings: PartnershipOffering[] = [
 export const implementationSteps: ImplementationStep[] = [
   {
     icon: Building2,
-    label: "Submit Inquiry",
-    desc: "Tell us your district's unique goals, student population, and program priorities.",
+    label: "Request a Demo",
+    desc: "Tell us about your school, group size, grade bands, and program interests.",
   },
   {
     icon: BookOpen,
-    label: "Customize",
-    desc: "Tailor programs to your local curriculum, standards alignment, and scheduling needs.",
+    label: "Discuss Program Fit",
+    desc: "Griot can help match chess, coding, robotics, math, or AI literacy to your schedule and students.",
   },
   {
     icon: Users,
-    label: "Launch",
-    desc: "Onboard students and faculty with dedicated training — most schools go live in 2–3 weeks.",
+    label: "Launch a Pilot",
+    desc: "Start with a focused pilot cohort and clear communication for families and organizers.",
   },
   {
     icon: BarChart3,
-    label: "Track Outcomes",
-    desc: "Measure impact with granular analytics, progress reports, and board-ready data.",
+    label: "Track Progress",
+    desc: "Organizers can follow class activity, enrollment, and student progress visibility.",
   },
 ];
 
 export const institutionBenefits: InstitutionBenefit[] = [
   {
     icon: LayoutDashboard,
-    title: "Admin Dashboard",
-    desc: "Centralized control for enrollment, scheduling, attendance, and progress across all campuses.",
+    title: "Progress Visibility",
+    desc: "Organizers can follow enrolled programs, upcoming sessions, and student activity in one place.",
     color: "text-primary",
     bg: "bg-primary-50",
   },
   {
     icon: ShieldCheck,
-    title: "COPPA & FERPA Safe",
-    desc: "Enterprise-grade security with full compliance for student data privacy at every level.",
+    title: "Age-Appropriate Design",
+    desc: "Programs are built for K-8 learners with guided classes and structured activities.",
     color: "text-green",
     bg: "bg-green-50",
   },
   {
     icon: GraduationCap,
-    title: "Credentialed Instructors",
-    desc: "Background-checked educators who integrate seamlessly with your faculty and standards.",
+    title: "Guided Instruction",
+    desc: "Live classes give students real-time guidance, discussion, and a clear weekly rhythm.",
     color: "text-orange",
     bg: "bg-orange-50",
   },
   {
     icon: TrendingUp,
-    title: "Outcome Analytics",
-    desc: "Track engagement, completion rates, and skill growth with reports built for administrators.",
+    title: "Program Support",
+    desc: "Griot can discuss scheduling, cohort options, and next steps for school and group programs.",
     color: "text-sky",
     bg: "bg-sky-50",
   },
 ];
 
 export const institutionFeatures = [
-  "Unlimited student seats",
-  "Admin analytics dashboard",
-  "Custom curriculum alignment",
-  "Dedicated success manager",
-  "On-site training included",
-  "LMS integration support",
+  "Chess, coding, robotics, math, and AI literacy",
+  "After-school and enrichment block options",
+  "Live instruction for student groups",
+  "Progress visibility for organizers",
+  "Pilot and cohort scheduling support",
+  "Dedicated school inquiry path",
 ];
 
 export const schoolStats = [
-  { value: "50+", label: "Partner Schools" },
-  { value: "10K+", label: "Students Served" },
-  { value: "2–3 wks", label: "Avg. Onboarding" },
-  { value: "200+", label: "Course Options" },
+  { value: "5", label: "Program Areas" },
+  { value: "K–8", label: "Grade Bands" },
+  { value: "Live", label: "Instruction" },
+  { value: "Pilot", label: "Program Options" },
 ];
 
 export const schoolTestimonials: SchoolTestimonial[] = [
   {
     quote:
-      "Integrating Griot into our after-school program was effortless. The data tracking helps us justify the investment to our board every single semester.",
+      "Griot made it straightforward to bring structured chess and coding enrichment into our after-school program. Families appreciated the clear communication and progress visibility.",
     name: "Dr. James Sterling",
     role: "Principal",
     location: "Heights Academy",
@@ -160,7 +160,7 @@ export const schoolTestimonials: SchoolTestimonial[] = [
   },
   {
     quote:
-      "Our district adopted Griot Academy for five schools in one semester. The onboarding was smooth and student engagement scores have been outstanding.",
+      "We piloted Griot programs for a small group of students. The format, scheduling support, and parent-facing updates made the partnership easy to explain.",
     name: "Superintendent Kim",
     role: "District Superintendent",
     location: "Oakland Unified",
@@ -172,19 +172,19 @@ export const schoolTestimonials: SchoolTestimonial[] = [
 
 export const schoolFaqs = [
   {
-    q: "How do school districts integrate the curriculum?",
-    a: "Our dedicated district success team handles onboarding end-to-end — from LMS integration to faculty training. Most schools are fully live within 2–3 weeks. We align all content with state standards and provide an admin dashboard for tracking outcomes.",
+    q: "What programs can schools explore?",
+    a: "Schools and groups can explore chess, coding, robotics, math, AI literacy, and STEM programming for groups of students. Griot can discuss grade bands, scheduling, and program fit.",
   },
   {
-    q: "What does institutional pricing look like?",
-    a: "We offer flexible district pricing based on student volume, program scope, and integration needs. Contact our partnerships team for a custom quote — most districts start with a pilot program before scaling district-wide.",
+    q: "How does a school partnership start?",
+    a: "Start with a school demo or contact request. Griot can discuss your goals, student group, schedule needs, and a practical pilot or cohort option.",
   },
   {
-    q: "Can Griot align with our existing curriculum standards?",
-    a: "Yes. All programs are aligned with Common Core and can be customized to match state-specific standards. Our team works with your curriculum directors during the customization phase.",
+    q: "Can Griot support after-school clubs?",
+    a: "Yes. Griot can support after-school programs, enrichment blocks, homeschool groups, and community learning settings.",
   },
   {
-    q: "What support do teachers receive?",
-    a: "Every school partnership includes faculty onboarding, live training sessions, and ongoing support from a dedicated success manager. Teachers get access to lesson plans, progress tools, and direct instructor support channels.",
+    q: "Will organizers be able to see student progress?",
+    a: "Griot is designed to give organizers visibility into enrolled programs, upcoming sessions, lesson activity, and progress updates.",
   },
 ];
