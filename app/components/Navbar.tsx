@@ -66,10 +66,10 @@ export default function Navbar() {
               alt=""
               width={36}
               height={36}
-              className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl object-contain group-hover:opacity-90 transition-opacity"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl object-contain group-hover:opacity-90 transition-opacity"
               unoptimized
             />
-            <span className="font-display font-bold text-base sm:text-lg text-navy">
+            <span className="font-display font-bold text-lg sm:text-2xl text-navy">
               Griot Academy
             </span>
           </Link>

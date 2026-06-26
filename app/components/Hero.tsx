@@ -74,7 +74,7 @@ export default function Hero() {
                   math
                 </span>
                 , and{" "}
-                <span className="font-semibold text-black">
+                <span className="font-semibold italic text-[#7C2D12]">
                   AI literacy.
                 </span>
               </h1>
