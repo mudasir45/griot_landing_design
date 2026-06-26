@@ -20,15 +20,14 @@ export default function Hero() {
           sizes="100vw"
           className="rounded-none! object-cover object-[78%_center] sm:object-[85%_center] lg:object-right"
         />
-        {/* Legibility overlay over the empty space */}
-        {/* <div className="absolute inset-0 bg-linear-to-r from-white via-white/90 to-white/10 sm:via-white/75 sm:to-transparent lg:from-white/95 lg:via-white/65" /> */}
-        <div className="absolute inset-0 bg-linear-to-t from-white/70 via-transparent to-transparent sm:from-transparent" />
+        {/* Keep the image readable while only lifting the far-left copy area */}
+        <div className="absolute inset-y-0 left-0 w-full bg-linear-to-r from-white/72 via-white/38 via-28% to-transparent sm:w-[62%] lg:w-[54%]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-0 w-full">
-        <div className="max-w-xl lg:max-w-2xl">
+        <div className="max-w-xl lg:max-w-[36rem] xl:max-w-[38rem] lg:-ml-8 xl:-ml-12">
           {/* Text Content */}
-          <div className="flex flex-col gap-5 sm:gap-6 lg:gap-7 text-center lg:text-left">
+          <div className="flex flex-col gap-5 sm:gap-6 lg:gap-7 text-center lg:text-left rounded-[2rem] bg-white/22 px-5 py-6 backdrop-blur-[3px] sm:px-6 sm:py-7 lg:rounded-[2.25rem] lg:bg-white/18">
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -51,7 +50,7 @@ export default function Hero() {
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] text-navy">
                 K-8{" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10 text-primary">enrichment</span>
+                  <span className="relative z-10 text-navy">enrichment</span>
                   <span
                     className="absolute -bottom-1 left-0 right-0 h-2 sm:h-3 bg-yellow/60 rounded-full -z-0"
                     aria-hidden="true"
@@ -59,7 +58,7 @@ export default function Hero() {
                 </span>
                 <br />
                 in chess, coding, robotics, math, and{" "}
-                <span className="text-orange">AI literacy.</span>
+                <span className="text-navy">AI literacy.</span>
               </h1>
             </motion.div>
 
@@ -67,7 +66,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-base sm:text-lg lg:text-xl text-body max-w-lg mx-auto lg:mx-0 leading-relaxed"
+              className="text-base sm:text-lg lg:text-xl text-navy/82 max-w-lg mx-auto lg:mx-0 leading-relaxed"
             >
               Live classes and guided practice that help students build focus,
               problem-solving, confidence, and technology skills.
@@ -98,7 +97,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.35 }}
               className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start w-full sm:w-auto"
             >
-              <button className="btn inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold bg-primary text-white border-primary-dark w-full sm:w-auto">
+              <button className="btn inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold bg-primary text-navy border-primary-dark w-full sm:w-auto">
                 Book a Trial Class
                 <ArrowRight className="w-4 h-4" />
               </button>
