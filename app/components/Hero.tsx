@@ -47,22 +47,36 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] text-navy">
+              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-[-0.045em] text-navy [text-shadow:0_1px_0_rgba(255,255,255,0.2)]">
                 K-8{" "}
                 <span className="relative inline-block">
                   <span className="relative z-10 text-navy">enrichment</span>
                   <span
-                    className="absolute -bottom-1 left-0 right-0 h-2 sm:h-3 bg-yellow/60 rounded-full -z-0"
+                    className="absolute -bottom-1 left-0 right-0 h-2 sm:h-3 bg-linear-to-r from-[#C7A24B]/85 via-[#E8CF8A]/60 to-[#C7A24B]/15 rounded-full -z-0"
                     aria-hidden="true"
                   />
                 </span>
                 <br />
                 in{" "}
-                <span className="text-yellow-dark">chess</span>,{" "}
-                <span className="text-sky">coding</span>,{" "}
-                <span className="text-green">robotics</span>,{" "}
-                <span className="text-pink">math</span>, and{" "}
-                <span className="text-orange">AI literacy.</span>
+                <span className="font-semibold italic text-[#6B4A12]">
+                  chess
+                </span>
+                ,{" "}
+                <span className="font-semibold italic text-[#1E40AF]">
+                  coding
+                </span>
+                ,{" "}
+                <span className="font-semibold italic text-[#14532D]">
+                  robotics
+                </span>
+                ,{" "}
+                <span className="font-semibold italic text-[#9D174D]">
+                  math
+                </span>
+                , and{" "}
+                <span className="font-semibold text-black">
+                  AI literacy.
+                </span>
               </h1>
             </motion.div>
 
