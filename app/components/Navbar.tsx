@@ -8,9 +8,27 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const navLinks = [
-  { label: "Programs", href: "/courses" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  {
+    label: "Programs",
+    href: "/courses",
+    color: "text-orange",
+    hoverColor: "hover:text-orange",
+    activeBg: "bg-orange-50",
+  },
+  {
+    label: "About",
+    href: "/about",
+    color: "text-pink",
+    hoverColor: "hover:text-pink",
+    activeBg: "bg-pink-50",
+  },
+  {
+    label: "Contact",
+    href: "/contact",
+    color: "text-sky",
+    hoverColor: "hover:text-sky",
+    activeBg: "bg-sky-50",
+  },
 ];
 
 export default function Navbar() {
@@ -64,9 +82,9 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-semibold transition-colors duration-200 ${isActive(link.href)
-                  ? "text-primary"
-                  : "text-body hover:text-navy"
+                className={`text-sm font-extrabold transition-colors duration-200 ${isActive(link.href)
+                  ? `${link.color}`
+                  : `${link.color} ${link.hoverColor}`
                   }`}
               >
                 {link.label}
@@ -112,9 +130,9 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`block px-3 py-3 text-base font-semibold rounded-xl transition-colors ${isActive(link.href)
-                    ? "text-primary bg-primary-50"
-                    : "text-navy hover:bg-surface"
+                  className={`block px-3 py-3 text-base font-extrabold rounded-xl transition-colors ${isActive(link.href)
+                    ? `${link.color} ${link.activeBg}`
+                    : `${link.color} hover:bg-surface`
                     }`}
                 >
                   {link.label}

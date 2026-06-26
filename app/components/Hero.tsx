@@ -57,8 +57,12 @@ export default function Hero() {
                   />
                 </span>
                 <br />
-                in chess, coding, robotics, math, and{" "}
-                <span className="text-navy">AI literacy.</span>
+                in{" "}
+                <span className="text-yellow-dark">chess</span>,{" "}
+                <span className="text-sky">coding</span>,{" "}
+                <span className="text-green">robotics</span>,{" "}
+                <span className="text-pink">math</span>, and{" "}
+                <span className="text-orange">AI literacy.</span>
               </h1>
             </motion.div>
 
