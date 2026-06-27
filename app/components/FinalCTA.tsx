@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, GraduationCap, Sparkles } from "lucide-react";
+import { GraduationCap, Sparkles } from "lucide-react";
 import SectionImage from "./ui/SectionImage";
 
 export default function FinalCTA() {
@@ -20,7 +20,7 @@ export default function FinalCTA() {
         <div className="grid grid-cols-2 gap-3 mb-8 lg:hidden max-w-sm mx-auto">
           <div className="relative card overflow-hidden aspect-square border-sky-200">
             <SectionImage
-              src="/images/The_Coder.4da186f687ce6f7459ecfac9704755dc.webp"
+              src="/images/cta/01.png"
               alt="Young coder ready to start"
               fill
               sizes="45vw"
@@ -28,7 +28,7 @@ export default function FinalCTA() {
           </div>
           <div className="relative card overflow-hidden aspect-square border-green-200">
             <SectionImage
-              src="/images/The_Scholar.d92aa1ba7abc5bbd377244bd1ee7151c.webp"
+              src="/images/cta/02.png"
               alt="Engaged student learning"
               fill
               sizes="45vw"
@@ -46,7 +46,7 @@ export default function FinalCTA() {
           >
             <div className="relative card overflow-hidden aspect-[3/4] border-sky-200 animate-float-gentle">
               <SectionImage
-                src="/images/The_Coder.4da186f687ce6f7459ecfac9704755dc.webp"
+                src="/images/cta/01.png"
                 alt="Young coder ready to start their learning journey"
                 fill
                 sizes="300px"
@@ -86,11 +86,11 @@ export default function FinalCTA() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto max-w-md sm:max-w-none">
-              <button className="btn inline-flex items-center justify-center gap-2 px-8 sm:px-10 py-4 sm:py-5 text-sm sm:text-base font-bold bg-primary text-white border-primary-dark w-full sm:w-auto">
-                Book a Trial Class
-                <ArrowRight className="w-5 h-5" />
+              <button className="btn inline-flex items-center justify-center gap-2 whitespace-nowrap px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold bg-primary text-white border-primary-dark w-full sm:w-auto">
+                Book a Trial
+                {/* <ArrowRight className="w-5 h-5 flex-shrink-0" /> */}
               </button>
-              <button className="btn inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 sm:py-5 text-sm sm:text-base font-bold bg-yellow text-navy border-yellow-dark w-full sm:w-auto">
+              <button className="btn inline-flex items-center justify-center gap-2 whitespace-nowrap px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold bg-yellow text-navy border-yellow-dark w-full sm:w-auto">
                 Join Founding Families
               </button>
             </div>
@@ -109,7 +109,7 @@ export default function FinalCTA() {
           >
             <div className="relative card overflow-hidden aspect-[3/4] border-green-200 animate-float" style={{ animationDelay: "1.5s" }}>
               <SectionImage
-                src="/images/The_Scholar.d92aa1ba7abc5bbd377244bd1ee7151c.webp"
+                src="/images/cta/02.png"
                 alt="Engaged student learning with Griot Academy"
                 fill
                 sizes="300px"

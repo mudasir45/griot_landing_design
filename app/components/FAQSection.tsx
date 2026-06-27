@@ -131,7 +131,7 @@ export default function FAQSection() {
           >
             <div className="relative card overflow-hidden aspect-[16/10] sm:aspect-[4/5] lg:aspect-[4/5] border-primary-200 mb-4">
               <SectionImage
-                src="/images/The_Friend.85cbfd7e36821d7569bc2fbfb9894a2c.webp"
+                src="/images/faqs/01.png"
                 alt="Students connecting in a safe, moderated online classroom"
                 fill
                 sizes="(max-width: 1024px) 100vw, 35vw"

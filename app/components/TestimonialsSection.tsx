@@ -94,17 +94,18 @@ export default function TestimonialsSection() {
           >
             <div className="relative card overflow-hidden aspect-[4/3]">
               <SectionImage
-                src="/images/banner01.png"
+                src="/images/testimonials/01.png"
                 alt="Happy children learning together in a supportive classroom"
                 fill
                 sizes="(max-width: 1024px) 100vw, 45vw"
+                className="object-top"
               />
             </div>
 
             <div className="grid grid-cols-2 gap-3">
               <div className="relative card overflow-hidden aspect-[4/3] border-sky-200">
                 <SectionImage
-                  src="/images/The_Coder.4da186f687ce6f7459ecfac9704755dc.webp"
+                  src="/images/testimonials/02.png"
                   alt="Parent-approved coding program"
                   fill
                   sizes="(max-width: 1024px) 45vw, 22vw"
@@ -112,7 +113,7 @@ export default function TestimonialsSection() {
               </div>
               <div className="relative card overflow-hidden aspect-[4/3] border-pink-200">
                 <SectionImage
-                  src="/images/The_Artist.1085a10836fc3a9c2389328070563306.webp"
+                  src="/images/testimonials/03.png"
                   alt="Creative arts program loved by families"
                   fill
                   sizes="(max-width: 1024px) 45vw, 22vw"

@@ -19,7 +19,7 @@ const features = [
     desc: "Students get real-time instruction, room to ask questions, and a weekly rhythm that builds habits.",
     color: "text-primary",
     iconBg: "bg-primary-100",
-    image: "/images/The_Friend.85cbfd7e36821d7569bc2fbfb9894a2c.webp",
+    image: "/images/features/live-class.png",
     imageAlt: "Students connecting in a live online video classroom",
     highlights: [
       "Small-group instruction",
@@ -34,7 +34,7 @@ const features = [
     desc: "Guided practice helps students review skills, complete activities, and keep learning between live sessions.",
     color: "text-orange",
     iconBg: "bg-orange-100",
-    image: "/images/facility-bg.jpg",
+    image: "/images/features/hands-on.png",
     imageAlt: "Instructor guiding children in a hands-on learning session",
     highlights: [
       "Practice between live classes",
@@ -49,7 +49,7 @@ const features = [
     desc: "Griot can support after-school programs, enrichment blocks, and school partnership pilots for groups of students.",
     color: "text-sky",
     iconBg: "bg-sky-100",
-    image: "/images/banner01.png",
+    image: "/images/features/programs.png",
     imageAlt: "Children learning collaboratively in a classroom setting",
     highlights: [
       "After-school and enrichment blocks",
@@ -64,7 +64,7 @@ const features = [
     desc: "Homeschool groups and community organizers can explore chess, coding, robotics, math, and AI literacy programming.",
     color: "text-green",
     iconBg: "bg-green-light",
-    image: "/images/The_Scholar.d92aa1ba7abc5bbd377244bd1ee7151c.webp",
+    image: "/images/features/community-programs.png",
     imageAlt: "Student engaged in structured online learning",
     highlights: [
       "Group scheduling support",
@@ -79,7 +79,7 @@ const features = [
     desc: "Families can join early cohorts in chess, coding, robotics, math, AI literacy, and STEM with a clear enrollment path.",
     color: "text-pink",
     iconBg: "bg-pink-100",
-    image: "/images/The_Explorer.659eb58be482e98a1c1bf3bf26cd24ef.webp",
+    image: "/images/features/cohort-programs.png",
     imageAlt: "Young explorer on an adventurous summer learning journey",
     highlights: [
       "Early cohort enrollment",
@@ -141,7 +141,7 @@ export default function FeaturesSection() {
                 <div
                   className={`relative ${imageFirst ? "order-1" : "order-1 lg:order-2"}`}
                 >
-                  <div className="relative card overflow-hidden aspect-[16/10] lg:aspect-[4/3]">
+                  <div className="relative card overflow-hidden aspect-[11/6]">
                     <SectionImage
                       src={feature.image}
                       alt={feature.imageAlt}

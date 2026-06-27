@@ -86,20 +86,20 @@ export default function InstructorsSection() {
         >
           <div className="relative card overflow-hidden aspect-[16/10] sm:aspect-[21/9]">
             <SectionImage
-              src="/images/facility-bg.jpg"
+              src="/images/guided/01.png"
               alt="World-class educators guiding small groups of engaged students"
               fill
               sizes="(max-width: 1024px) 100vw, 80vw"
             />
           </div>
-          <div className="absolute -bottom-3 right-2 sm:-bottom-4 sm:right-4 hidden sm:block card overflow-hidden w-24 sm:w-36 aspect-square border-primary-200 animate-float-gentle">
+          {/* <div className="absolute -bottom-3 right-2 sm:-bottom-4 sm:right-4 hidden sm:block card overflow-hidden w-24 sm:w-36 aspect-square border-primary-200 animate-float-gentle">
             <SectionImage
               src="/images/about01.jpg"
               alt="One-on-one mentorship between instructor and student"
               fill
               sizes="144px"
             />
-          </div>
+          </div> */}
         </motion.div>
 
         {/* Instructors Grid */}

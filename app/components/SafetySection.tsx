@@ -181,9 +181,9 @@ export default function SafetySection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="relative"
           >
-            <div className="relative card overflow-hidden aspect-[4/3] border-primary-200 mb-4">
+            <div className="relative card overflow-hidden aspect-[11/6] border-primary-200 mb-4">
               <SectionImage
-                src="/images/The_Scholar.d92aa1ba7abc5bbd377244bd1ee7151c.webp"
+                src="/images/safety-section/safety.png"
                 alt="Student engaged in a safe, supervised online learning session"
                 fill
                 sizes="(max-width: 1024px) 100vw, 45vw"

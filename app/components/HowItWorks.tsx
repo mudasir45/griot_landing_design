@@ -97,7 +97,7 @@ export default function HowItWorks() {
           >
             <div className="relative card overflow-hidden aspect-[4/3]">
               <SectionImage
-                src="/images/about01.jpg"
+                src="/images/how-it-works/01.png"
                 alt="Instructor reading with a young learner — the start of a learning journey"
                 fill
                 sizes="(max-width: 1024px) 100vw, 45vw"
@@ -107,7 +107,7 @@ export default function HowItWorks() {
             <div className="grid grid-cols-2 gap-3">
               <div className="relative card overflow-hidden aspect-[4/3] border-primary-200">
                 <SectionImage
-                  src="/images/The_Scholar.d92aa1ba7abc5bbd377244bd1ee7151c.webp"
+                  src="/images/how-it-works/02.png"
                   alt="Student learning online with laptop and earbuds"
                   fill
                   sizes="(max-width: 1024px) 45vw, 22vw"
@@ -115,7 +115,7 @@ export default function HowItWorks() {
               </div>
               <div className="relative card overflow-hidden aspect-[4/3] border-sky-200">
                 <SectionImage
-                  src="/images/The_Traveler.883c94f365d9a10a4f93c224c51ef0a7.webp"
+                  src="/images/how-it-works/03.png"
                   alt="Student exploring languages and global cultures"
                   fill
                   sizes="(max-width: 1024px) 45vw, 22vw"
