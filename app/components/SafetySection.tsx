@@ -140,7 +140,7 @@ export default function SafetySection() {
             transition={{ duration: 0.6 }}
             className="flex flex-col gap-5"
           >
-            <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-50 border-primary-200 text-primary self-start">
+            <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-50 border-primary-200 text-accent self-start">
               <LayoutDashboard className="w-4 h-4" />
               <span className="text-xs font-bold uppercase tracking-wider">
                 Parent Dashboard
@@ -148,7 +148,7 @@ export default function SafetySection() {
             </div>
             <h2 className="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-navy">
               See what your child is{" "}
-              <span className="text-primary">working on.</span>
+              <span className="heading-accent">working on.</span>
             </h2>
             <p className="text-body leading-relaxed">
               The parent dashboard helps families stay organized. Parents can view
@@ -167,7 +167,7 @@ export default function SafetySection() {
                 </li>
               ))}
             </ul>
-            <button className="btn self-stretch sm:self-start inline-flex items-center justify-center gap-2 px-6 py-3 font-bold bg-primary text-white border-primary-dark w-full sm:w-auto">
+            <button className="btn btn-primary self-stretch sm:self-start inline-flex items-center justify-center gap-2 px-6 py-3 font-bold w-full sm:w-auto">
               <TrendingUp className="w-4 h-4" />
               Book a Trial Class
             </button>
@@ -220,7 +220,7 @@ export default function SafetySection() {
 
                 <div className="card-sm bg-yellow/10 border-yellow/40 p-3 flex items-center gap-3">
                   <div className="w-7 h-7 rounded-lg bg-yellow flex items-center justify-center flex-shrink-0">
-                    <Bell className="w-3.5 h-3.5 text-white" />
+                    <Bell className="w-3.5 h-3.5 text-navy" />
                   </div>
                   <div>
                     <p className="text-xs font-bold text-navy">Next Class: Today 4:00 PM</p>

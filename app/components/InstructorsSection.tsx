@@ -59,7 +59,7 @@ export default function InstructorsSection() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-8 sm:mb-12"
         >
-          <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-100 border-primary-200 text-primary mb-4">
+          <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-100 border-primary-200 text-accent mb-4">
             <Users className="w-4 h-4" />
             <span className="text-xs font-bold uppercase tracking-wider">
               Expert Instructors
@@ -67,7 +67,7 @@ export default function InstructorsSection() {
           </div>
           <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
             Guided by{" "}
-            <span className="text-primary">Experienced Instructors</span>
+            <span className="heading-accent">Experienced Instructors</span>
           </h2>
           <p className="text-body text-base sm:text-lg leading-relaxed px-1">
             Griot instructors lead small, guided classes in chess, coding,
@@ -123,7 +123,7 @@ export default function InstructorsSection() {
               </div>
 
               <div>
-                <h3 className="font-display font-bold text-sm sm:text-base text-navy group-hover:text-primary transition-colors">
+                <h3 className="font-display font-bold text-sm sm:text-base text-navy group-hover:text-accent transition-colors">
                   {instructor.name}
                 </h3>
                 <p className="text-xs text-subtle mt-0.5">{instructor.title}</p>

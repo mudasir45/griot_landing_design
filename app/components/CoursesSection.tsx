@@ -23,7 +23,7 @@ export default function CoursesSection({ courses }: CoursesSectionProps) {
           transition={{ duration: 0.6 }}
           className="text-center mb-10 sm:mb-14"
         >
-          <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-50 border-primary-200 text-primary mb-4">
+          <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-50 border-primary-200 text-accent mb-4">
             <Brain className="w-4 h-4" />
             <span className="text-xs font-bold uppercase tracking-wider">
               Program Areas
@@ -31,7 +31,7 @@ export default function CoursesSection({ courses }: CoursesSectionProps) {
           </div>
           <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
             Programs that build{" "}
-            <span className="text-primary">focus, problem-solving, and confidence.</span>
+            <span className="heading-accent">focus, problem-solving, and confidence.</span>
           </h2>
           <p className="text-body text-center text-base sm:text-lg max-w-xl leading-relaxed w-full mx-auto px-1">
             Start with one program, then add another as your child grows.

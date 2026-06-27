@@ -15,7 +15,7 @@ export default function AnnouncementBar() {
         Early cohort enrollment is open —{" "}
         <Link
           href="/courses"
-          className="font-bold text-primary hover:text-primary-dark transition-colors"
+          className="font-bold text-accent hover:text-accent-strong transition-colors"
         >
           Book a Trial Class
         </Link>

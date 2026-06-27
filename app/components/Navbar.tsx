@@ -93,10 +93,10 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden md:flex items-center gap-5 flex-shrink-0">
-            <button className="text-sm font-semibold text-body hover:text-primary transition-colors cursor-pointer">
+            <button className="text-sm font-semibold text-body hover:text-accent transition-colors cursor-pointer">
               Log In
             </button>
-            <button className="btn px-5 py-2.5 text-sm font-bold bg-primary text-white border-primary-dark">
+            <button className="btn btn-primary px-5 py-2.5 text-sm font-bold">
               Book a Trial Class
             </button>
           </div>
@@ -139,10 +139,10 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="pt-3 mt-2 border-t border-border space-y-2">
-                <button className="w-full py-3 text-sm font-semibold text-body hover:text-primary transition-colors cursor-pointer">
+                <button className="w-full py-3 text-sm font-semibold text-body hover:text-accent transition-colors cursor-pointer">
                   Log In
                 </button>
-                <button className="btn w-full py-3 text-sm font-bold bg-primary text-white border-primary-dark">
+                <button className="btn btn-primary w-full py-3 text-sm font-bold">
                   Book a Trial Class
                 </button>
               </div>

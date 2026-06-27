@@ -79,7 +79,7 @@ export default function HowItWorks() {
           </div>
           <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
             A simple path from{" "}
-            <span className="text-primary">interest to class.</span>
+            <span className="heading-accent">interest to class.</span>
           </h2>
           <p className="text-body text-base sm:text-lg leading-relaxed px-1">
             Parents should know what happens before they click.
@@ -165,7 +165,7 @@ export default function HowItWorks() {
               transition={{ duration: 0.5, delay: 0.5 }}
               className="pt-2"
             >
-              <button className="btn inline-flex items-center gap-2 px-8 py-4 font-bold bg-primary text-white border-primary-dark w-full sm:w-auto justify-center">
+              <button className="btn btn-primary inline-flex items-center gap-2 px-8 py-4 font-bold w-full sm:w-auto justify-center">
                 Book a Trial Class
                 <ArrowRight className="w-4 h-4" />
               </button>

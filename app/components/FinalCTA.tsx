@@ -62,7 +62,7 @@ export default function FinalCTA() {
             className="flex flex-col items-center gap-5 sm:gap-6 text-center"
           >
             <div className="card-sm w-14 h-14 sm:w-16 sm:h-16 bg-primary border-primary-dark flex items-center justify-center">
-              <GraduationCap className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+              <GraduationCap className="w-7 h-7 sm:w-8 sm:h-8 text-navy" />
             </div>
 
             <div>
@@ -74,7 +74,7 @@ export default function FinalCTA() {
               </div>
               <h2 className="font-display font-extrabold section-heading text-navy leading-tight">
                 Find the right starting point{" "}
-                <span className="text-primary">for your child.</span>
+                <span className="heading-accent">for your child.</span>
               </h2>
             </div>
 
@@ -86,11 +86,11 @@ export default function FinalCTA() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto max-w-md sm:max-w-none">
-              <button className="btn inline-flex items-center justify-center gap-2 whitespace-nowrap px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold bg-primary text-white border-primary-dark w-full sm:w-auto">
+              <button className="btn btn-primary inline-flex items-center justify-center gap-2 whitespace-nowrap px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold w-full sm:w-auto">
                 Book a Trial
                 {/* <ArrowRight className="w-5 h-5 flex-shrink-0" /> */}
               </button>
-              <button className="btn inline-flex items-center justify-center gap-2 whitespace-nowrap px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold bg-yellow text-navy border-yellow-dark w-full sm:w-auto">
+              <button className="btn inline-flex items-center justify-center gap-2 whitespace-nowrap px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold bg-white text-navy border-border-strong w-full sm:w-auto">
                 Join Founding Families
               </button>
             </div>

@@ -49,32 +49,26 @@ export default function Hero() {
             >
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-[-0.045em] text-navy [text-shadow:0_1px_0_rgba(255,255,255,0.2)]">
                 K-8{" "}
-                <span className="relative inline-block">
-                  <span className="relative z-10 text-navy">enrichment</span>
-                  <span
-                    className="absolute -bottom-1 left-0 right-0 h-2 sm:h-3 bg-linear-to-r from-[#C7A24B]/85 via-[#E8CF8A]/60 to-[#C7A24B]/15 rounded-full -z-0"
-                    aria-hidden="true"
-                  />
-                </span>
+                <span className="text-highlight text-navy">enrichment</span>
                 <br />
                 in{" "}
-                <span className="font-semibold italic text-[#6B4A12]">
+                <span className="font-semibold italic text-subject-chess">
                   chess
                 </span>
                 ,{" "}
-                <span className="font-semibold italic text-[#1E40AF]">
+                <span className="font-semibold italic text-subject-coding">
                   coding
                 </span>
                 ,{" "}
-                <span className="font-semibold italic text-[#14532D]">
+                <span className="font-semibold italic text-subject-robotics">
                   robotics
                 </span>
                 ,{" "}
-                <span className="font-semibold italic text-[#9D174D]">
+                <span className="font-semibold italic text-subject-math">
                   math
                 </span>
                 , and{" "}
-                <span className="font-semibold italic text-[#7C2D12]">
+                <span className="font-semibold italic text-subject-ai">
                   AI literacy.
                 </span>
               </h1>
@@ -115,7 +109,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.35 }}
               className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start w-full sm:w-auto"
             >
-              <button className="btn inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold bg-primary text-navy border-primary-dark w-full sm:w-auto">
+              <button className="btn btn-primary inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold w-full sm:w-auto">
                 Book a Trial Class
                 <ArrowRight className="w-4 h-4" />
               </button>

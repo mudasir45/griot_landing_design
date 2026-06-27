@@ -58,14 +58,14 @@ export default function CourseCard({ course, index = 0 }: CourseCardProps) {
               {course.grades}
             </span>
           </div>
-          <h3 className="font-display font-bold text-lg sm:text-xl text-navy group-hover:text-primary transition-colors">
+          <h3 className="font-display font-bold text-lg sm:text-xl text-navy group-hover:text-accent transition-colors">
             {course.title}
           </h3>
           {/* <p className="text-sm text-body leading-relaxed flex-1">{course.desc}</p> */}
 
           <div className="flex items-center justify-between pt-3 border-t border-black/5">
             <span className="text-xs font-semibold text-subtle">{course.sessionLength}</span>
-            <span className="inline-flex items-center gap-1 text-xs font-bold text-primary group-hover:gap-2 transition-all duration-200">
+            <span className="inline-flex items-center gap-1 text-xs font-bold text-accent group-hover:gap-2 transition-all duration-200">
               View Details
               <ChevronRight className="w-3.5 h-3.5" />
             </span>

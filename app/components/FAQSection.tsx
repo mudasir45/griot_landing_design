@@ -55,7 +55,7 @@ function FAQItem({
         aria-expanded={isOpen}
       >
         <span
-          className={`font-bold text-sm sm:text-base leading-snug transition-colors ${isOpen ? "text-primary" : "text-navy"
+          className={`font-bold text-sm sm:text-base leading-snug transition-colors ${isOpen ? "text-accent" : "text-navy"
             }`}
         >
           {q}
@@ -66,7 +66,7 @@ function FAQItem({
           className="flex-shrink-0 mt-0.5"
         >
           <ChevronDown
-            className={`w-5 h-5 transition-colors ${isOpen ? "text-primary" : "text-subtle"
+            className={`w-5 h-5 transition-colors ${isOpen ? "text-accent" : "text-subtle"
               }`}
           />
         </motion.div>
@@ -105,7 +105,7 @@ export default function FAQSection() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-8 sm:mb-12"
         >
-          <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-50 border-primary-200 text-primary mb-4">
+          <div className="inline-flex items-center gap-2 pill px-4 py-2 bg-primary-50 border-primary-200 text-accent mb-4">
             <HelpCircle className="w-4 h-4" />
             <span className="text-xs font-bold uppercase tracking-wider">
               Frequently Asked
@@ -113,7 +113,7 @@ export default function FAQSection() {
           </div>
           <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
             Questions parents ask{" "}
-            <span className="text-primary">before getting started.</span>
+            <span className="heading-accent">before getting started.</span>
           </h2>
           <p className="text-body text-base sm:text-lg leading-relaxed px-1">
             Everything parents and schools need to know before getting started.
@@ -138,15 +138,15 @@ export default function FAQSection() {
               />
             </div>
             <div className="card bg-primary border-primary-dark p-4 sm:p-5">
-              <p className="font-display font-bold text-base sm:text-lg text-white mb-1">
+              <p className="font-display font-bold text-base sm:text-lg text-navy mb-1">
                 Still have questions?
               </p>
-              <p className="text-on-dark-muted text-sm mb-4">
+              <p className="text-navy/75 text-sm mb-4">
                 Our support team is here to help parents and schools get started.
               </p>
               <Link
                 href="/contact"
-                className="btn w-full py-3 font-bold bg-white text-primary border-primary-light inline-flex items-center justify-center"
+                className="btn w-full py-3 font-bold bg-white text-navy border-white inline-flex items-center justify-center"
               >
                 <HelpCircle className="w-4 h-4 mr-2" />
                 Contact Us

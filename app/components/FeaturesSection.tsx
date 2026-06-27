@@ -115,7 +115,7 @@ export default function FeaturesSection() {
           </div>
           <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
             Students learn by{" "}
-            <span className="text-primary">thinking, building, and explaining.</span>
+            <span className="heading-accent">thinking, building, and explaining.</span>
           </h2>
           <p className="text-body text-base sm:text-lg leading-relaxed px-1">
             In Griot Academy programs, students solve problems, test ideas, ask
@@ -209,7 +209,7 @@ export default function FeaturesSection() {
                 </div>
 
                 <div className="p-5 flex flex-col gap-2 flex-1">
-                  <h3 className="font-display font-bold text-lg text-navy group-hover:text-primary transition-colors">
+                  <h3 className="font-display font-bold text-lg text-navy group-hover:text-accent transition-colors">
                     {feature.title}
                   </h3>
                   <p className="text-sm text-body leading-relaxed">{feature.desc}</p>
@@ -242,17 +242,17 @@ export default function FeaturesSection() {
               aria-hidden="true"
             />
             <div>
-              <h3 className="font-display font-bold text-2xl text-white mb-2">
+              <h3 className="font-display font-bold text-2xl text-navy mb-2">
                 Bring Griot to your school.
               </h3>
-              <p className="text-on-dark-muted text-sm leading-relaxed">
+              <p className="text-navy/75 text-sm leading-relaxed">
                 Schools and groups can explore chess, coding, robotics, math, AI
                 literacy, and STEM programming for students.
               </p>
             </div>
             <Link
               href="/schools"
-              className="btn w-full py-3 font-bold bg-white text-primary border-primary-light inline-flex items-center justify-center"
+              className="btn w-full py-3 font-bold bg-white text-navy border-white inline-flex items-center justify-center"
             >
               Request School Demo
             </Link>

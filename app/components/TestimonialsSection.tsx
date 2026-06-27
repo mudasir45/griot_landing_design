@@ -13,7 +13,7 @@ const testimonials = [
     location: "New York, NY",
     initials: "LW",
     bg: "bg-primary",
-    tagColor: "bg-primary-100 text-primary border-primary-200",
+    tagColor: "bg-primary-100 text-accent border-primary-200",
     tag: "Chess Parent",
     stars: 5,
   },
@@ -75,7 +75,7 @@ export default function TestimonialsSection() {
           </div>
           <h2 className="font-display font-extrabold section-heading text-navy mb-3 sm:mb-4">
             Trusted by{" "}
-            <span className="text-primary">K-8 families.</span>
+            <span className="heading-accent">K-8 families.</span>
           </h2>
           <p className="text-body text-base sm:text-lg leading-relaxed px-1">
             Families and school partners share how structured enrichment in
