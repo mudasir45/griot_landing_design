@@ -32,96 +32,67 @@ export default function CourseDetailContent({
     defaultCohort
   );
 
-  const bannerSrc = course.banner ?? course.image;
-
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-24 pb-12 sm:pb-16 overflow-hidden min-h-[420px] sm:min-h-[480px] lg:min-h-[520px] flex items-end">
-        <div className="absolute inset-0" aria-hidden="true">
-          <SectionImage
-            src={bannerSrc}
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="rounded-none object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/35 sm:to-navy/20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/15 to-navy/40" />
+      <section className="relative pt-24 pb-10 sm:pb-14 bg-gradient-to-br from-primary-50 via-white to-surface-2 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+          <div className="absolute -top-32 -right-32 w-[400px] h-[400px] rounded-full bg-primary-100/40 blur-3xl animate-blob" />
         </div>
 
-        <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/5 translate-x-32 -translate-y-32 animate-blob" />
-          <div
-            className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-yellow/10 -translate-x-20 translate-y-20 animate-blob"
-            style={{ animationDelay: "4s" }}
-          />
-        </div>
-
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none" aria-hidden="true" />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-2 sm:pb-4">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/courses"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-white/75 hover:text-white transition-colors mb-6 sm:mb-8"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-body hover:text-primary transition-colors mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Course Catalog
           </Link>
 
-          <div className="grid lg:grid-cols-[1fr_auto] gap-8 lg:gap-12 items-end">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="flex items-start gap-2 flex-wrap mb-4 sm:mb-5">
-                <span className="pill text-xs font-bold px-3 py-1 bg-white/10 border-white/20 text-white">
+              <div className="flex items-start gap-2 flex-wrap mb-4">
+                <span className={`pill text-xs font-bold px-3 py-1 ${course.tagColor}`}>
                   {course.tag}
                 </span>
                 {course.popular && (
-                  <span className="pill text-xs font-bold px-3 py-1 bg-yellow/90 border-yellow text-yellow-900">
+                  <span className="pill text-xs font-bold px-3 py-1 bg-yellow border-yellow-dark text-yellow-900">
                     Most Popular
                   </span>
                 )}
-                <span className="pill text-xs font-semibold px-3 py-1 bg-white/10 border-white/20 text-white/90">
+                <span className="text-xs font-semibold text-body bg-white px-3 py-1 rounded-full border border-border">
                   {course.grades}
                 </span>
                 {cohorts.length > 0 && (
-                  <span className="pill text-xs font-bold px-3 py-1 bg-primary/30 border-primary-light/40 text-white">
+                  <span className="pill text-xs font-bold px-3 py-1 bg-primary-50 text-primary border-primary-200">
                     {cohorts.length} cohort{cohorts.length !== 1 ? "s" : ""} available
                   </span>
                 )}
               </div>
 
-              <div className="flex items-start gap-4 mb-4">
-                <div
-                  className={`hidden sm:flex w-14 h-14 rounded-2xl ${course.iconBg} items-center justify-center flex-shrink-0 shadow-lg ring-2 ring-white/20`}
-                >
-                  <Icon className="w-7 h-7 text-white" />
-                </div>
-                <h1 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] text-white leading-[1.1]">
-                  {course.title}
-                </h1>
-              </div>
-
-              <p className="text-on-dark-muted text-base sm:text-lg leading-relaxed mb-6 max-w-2xl">
+              <h1 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-navy leading-tight mb-4">
+                {course.title}
+              </h1>
+              <p className="text-body text-base sm:text-lg leading-relaxed mb-6">
                 {course.longDesc}
               </p>
 
-              <div className="flex flex-wrap gap-x-5 gap-y-3 text-sm font-semibold text-white/90">
+              <div className="flex flex-wrap gap-4 text-sm font-semibold text-body">
                 <span className="inline-flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-yellow" />
+                  <Clock className="w-4 h-4 text-primary" />
                   {course.sessionLength}
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <BookOpen className="w-4 h-4 text-yellow" />
+                  <BookOpen className="w-4 h-4 text-primary" />
                   {course.duration}
                 </span>
                 {cohorts.length > 0 && (
                   <span className="inline-flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-yellow" />
+                    <Calendar className="w-4 h-4 text-primary" />
                     Multiple start dates
                   </span>
                 )}
@@ -132,26 +103,22 @@ export default function CourseDetailContent({
               initial={{ opacity: 0, scale: 0.97 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="hidden lg:block flex-shrink-0"
+              className="relative"
             >
-              <div className="relative w-72 xl:w-80 aspect-[4/3] rounded-2xl overflow-hidden border-2 border-white/25 shadow-2xl ring-1 ring-black/10">
+              <div className={`card ${course.border} overflow-hidden aspect-[16/10]`}>
                 <SectionImage
                   src={course.image}
                   alt={course.imageAlt}
                   fill
-                  sizes="320px"
-                  className="rounded-none"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="rounded-[20px]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/50 via-transparent to-transparent" />
-                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2">
-                  <span className="text-xs font-bold text-white drop-shadow-sm">
-                    {course.price}
-                  </span>
-                  <div
-                    className={`w-9 h-9 rounded-xl ${course.iconBg} flex items-center justify-center shadow-md`}
-                  >
-                    <Icon className="w-4 h-4 text-white" />
-                  </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                <div
+                  className={`absolute bottom-4 left-4 w-12 h-12 rounded-xl ${course.iconBg} flex items-center justify-center`}
+                >
+                  <Icon className="w-6 h-6 text-white" />
                 </div>
               </div>
             </motion.div>
